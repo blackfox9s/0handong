@@ -1,0 +1,62 @@
+$fontSize: 24px;
+
+$font100: 's-core-dream-thin';
+$font200: 's-core-dream-extralight';
+$font300: 's-core-dream-light';
+$font400: 's-core-dream-regular';
+$font500: 's-core-dream-medium';
+$font600: 's-core-dream-bold';
+$font700: 's-core-dream-extrabold';
+$font800: 's-core-dream-heavy';
+$font900: 's-core-dream-black';
+
+@function rem($pixels, $context: $fontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1rem;
+}
+
+@function assign-inputs($inputs, $pseudo: null) {
+  $list: ();
+
+  @each $input in $inputs {
+    $input: unquote($input);
+    $input: if($pseudo, $input + ":" + $pseudo, $input);
+    $list: append($list, $input, comma);
+  }
+  @return $list;
+}
+
+@mixin clearfix {
+  &::after {content: ''; display: block; clear: both;}
+}
+
+@mixin size640 {
+  @media (max-width: 640px) { @content; }
+}
+@mixin size540 {
+  @media (max-width: 540px) { @content; }
+}
+@mixin size480 {
+  @media (max-width: 480px) { @content; }
+}
+@mixin size360 {
+  @media (max-width: 360px) { @content; }
+}
+
+@mixin transition {
+  transition: all 0.3s;
+}
+
+$base-transition: all 0.3s ease-in-out;
+
+$input-arr-grp1: 'input[type="number"]', 'input[type="password"]', 'input[type="tel"]', 'input[type="email"]', 'input[type="text"], select, textarea';
+$input-arr-grp2: 'input[type="number"]', 'input[type="password"]', 'input[type="tel"]', 'input[type="email"]', 'input[type="text"]';
+$input-arr-grp3: 'input[type="checkbox"]', 'input[type="radio"]';
+$input-arr1: assign-inputs($input-arr-grp1);
+$input-arr2: assign-inputs($input-arr-grp2);
+$input-arr3: assign-inputs($input-arr-grp3);

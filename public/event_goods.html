@@ -58,6 +58,11 @@
           <button type="button" class="button__type1" onclick="popupOpen('form')">
             이벤트 신청하기
           </button>
+          <!--
+          <button type="button" class="button__type1" onclick="popupOpen('my')">
+            나의 신청보기
+          </button>
+          -->
         </div>
         <dl class="common__notice">
           <dt>유의사항</dt>
@@ -267,9 +272,14 @@
         </ul>
       </section>
       <div class="popup__buttons">
-        <button type="button" class="button__type5" onclick="popupClose($(this))">
+        <button type="button" class="button__type5" onclick="popupClose($(this));">
           확인
         </button>
+        <!--
+        <button type="button" class="button__type5" onclick="popupClose($(this)); popupOpen('form');">
+          수정
+        </button>
+        -->
       </div>
     </div>
   </article>
@@ -303,7 +313,7 @@
         </dl>
       </section>
       <div class="popup__buttons">
-        <button type="button" class="button__type5" onclick="apply()">
+        <button type="button" class="button__type5" onclick="apply()" disabled>
           확인
         </button>
       </div>
@@ -322,24 +332,29 @@
     <a href="javascript:alertPopup(true, 'ready');">준비 중</a>
     <a href="javascript:alertPopup(true, 'privacy');">개인정보</a>
     <a href="javascript:alertPopup(true, 'loginAfter');">로그인 안내</a>
-    <a href="javascript:alertPopup(true, 'complete');">이벤트 참여완료</a>
     <a href="javascript:alertPopup(true, 'noData');">신청 정보가 없음</a>
-    <a href="javascript:alertPopup(true, 'end');">캠핑인더시티 이벤트 종료</a>
-    <a href="javascript:alertPopup(true, '14세 이상인 고객님만<br />참여할 수 있습니다.');">14세</a>
+    <a href="javascript:alertPopup(true, '사죠영 굿즈 얼리버드<br />이벤트 참여기간이 종료되었습니다.');">사죠영 굿즈 얼리버드 이벤트 종료</a>
+    <a href="javascript:alertPopup(true, '14up');">14세</a>
+    <a href="javascript:alertPopup(true, 'complete');">이벤트 신청완료</a>
+    <!--
+    <a href="javascript:alertPopup(true, 'already');">이미참여</a>
+    -->
   </div>
 
   <script type="text/javascript">
     $('.event__info-agree input:checkbox').off('click').on('click', function() {
       if ($(this).is(':checked')) {
-        alertPopup(true, '14세 이상인 고객님만<br />참여할 수 있습니다.');
+        alertPopup(true, '14up');
+      }
+    });
+    $('[data-alert="goods"] select').on('change', function() {
+      if ($(this).val() != 0) {
+        $('.popup-form .popup__buttons button').attr('disabled', false)
       }
     });
     function apply () {
-      if (!inputChecked()) {
-        return false;
-      }
-      // 신청하기 진행
-      popupClose($('.popup-form'))
+      popupClose($('.popup-form'));
+      alertPopup(true, 'complete');
     }
   </script>
 </body>

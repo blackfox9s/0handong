@@ -4,25 +4,28 @@ function alertPopup(opened, msg, link) {
     var text = '';
     switch (msg) {
       case 'ready':
-        text = '준비 중입니다.'
+        text = '준비 중입니다.';
         break;
       case 'privacy':
-        text = '본 이벤트는 개인정보 수집·이용 및 취급위탁에 대한 동의를 완료한 고객만<br />참여하실 수 있습니다.'
+        text = '본 이벤트는 개인정보 수집·이용 및 취급위탁에 대한 동의를 완료한 고객만<br />참여하실 수 있습니다.';
         break;
       case 'loginAfter':
-        text = '0한동 로그인 후<br />이벤트에 참여해주세요!'
+        text = '0한동 로그인이 필요합니다.';
         break;
       case 'complete':
-        text = '이미 이벤트 참여를 완료하셨습니다.<br />당첨자 발표를 기다려주세요.'
-        break;
-      case 'end':
-        text = '캠핑인더시티<br />이벤트 참여기간이 종료되었습니다.'
+        text = '신청이 완료되었습니다';
         break;
       case 'noOpen':
-        text = '오픈 준비 중입니다.'
+        text = '오픈 준비 중입니다.';
         break;
       case 'noData':
-        text = '신청 정보가 없습니다.'
+        text = '신청 이력이 없습니다.';
+        break;
+      case '14up':
+        text = '14세 이상인 고객님만<br />참여할 수 있습니다.';
+        break;
+      case 'already':
+        text = '이미 참여하셨습니다.';
         break;
       default:
         text = msg

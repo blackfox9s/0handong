@@ -116,6 +116,9 @@ body {
   font-size: 1.25rem;
   font-family: "s-core-dream-light";
 }
+.button__type1:disabled, .button__type2:disabled, .button__type3:disabled, .button__type5:disabled {
+  opacity: 0.5;
+}
 .button__type1 {
   background: #000;
   color: #fff !important;
