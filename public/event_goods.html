@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>한동</title>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=no" />
+  <link rel='stylesheet' type='text/css' href='css/common.css'/>
+  <link rel='stylesheet' type='text/css' href='css/style.css'/>
+  <script type="text/javascript" src='js/jquery.min.js'></script>
+  <script type="text/javascript" src='js/slick.min.js'></script>
+  <script type="text/javascript" src='js/goodsEvent.js'></script>
+  <script type="text/javascript" src="/appweb/js/layout/layout.js"></script>
+</head>
+<body id="camping" class="camping--event">
+  <div class="camping__wrap">
+    <section class="camping__tab">
+      <span class="button__back">back</span>
+      <ul>
+        <li><a href="index.html">사줘영</a></li>
+        <li><a href="info.html">소개</a></li>
+        <li><a href="goods.html">굿즈</a></li>
+        <li class="active"><a href="event.html">이벤트</a></li>
+      </ul>
+    </section>
+
+    <section class="camping__content">
+      <!-- 캠핑 이벤트 상단(s) -->
+      <article class="event__top">
+        <img src="images/event/top_goods.png" alt="사죠영 굿즈 얼리버드 이벤트" />
+      </article>
+      <!-- 캠핑 이벤트 상단(e) -->
+
+      <!-- 캠핑 이벤트 상세[s) -->
+      <article class="event__info">
+        <div class="event__info-agree">
+          <ul class="event__popup-buttons">
+            <li>
+              <button type="button" class="button__type2" onclick="popupOpen('goods', 1)">
+                자이언트 빈백
+              </button>
+            </li>
+            <li>
+              <button type="button" class="button__type2" onclick="popupOpen('goods', 2)">
+                크루저보드
+              </button>
+            </li>
+          </ul>
+          <div class="custom__checkbox">
+            <label>
+              <input type="checkbox" />
+              <span>개인정보 수집･이용 및 취급위탁 내용을 확인하고 동의합니다.</span>
+            </label>
+            <a href="javascript:popupOpen('privacy')">전문보기</a>
+          </div>
+        </div>
+        <div class="event__info-buttons">
+          <button type="button" class="button__type1" onclick="popupOpen('form')">
+            이벤트 신청하기
+          </button>
+        </div>
+        <dl class="common__notice">
+          <dt>유의사항</dt>
+          <dd>이 이벤트는 모바일로만 참여 가능합니다.</dd>
+          <dd>인증에 필요한 개인 정보 미입력 시 응모가 불가능 합니다.</dd>
+          <dd>중목 참여가 불가합니다. 1인당 최대 1개만 추첨 제공됩니다.</dd>
+          <dd>성함 및 연락처 오입력으로 인한 불이익 및 책임은 참여자 본인에게 있으며,
+            비정상적이거나 불법적인 방법으로 이벤트에 참여하신 경우 당첨이 취소될 수
+            있습니다.</dd>
+          <dd>경품 당첨 사실은 당첨자에게 개별 연락 예정이며, 3회 이상 연결이 안될 경우
+            당첨이 취소 될 수 있습니다.</dd>
+          <dd>경품 당첨 시 경품 배송을 위해, 당첨 안내 시 개인정보 (주소 등)에 대한 추가
+            수집 및 이용 동의 등을 요청 할  수 있습니다.</dd>
+          <dd>경품이미지는 실물과 다를 수 있으며, 이 이벤트는 제휴 업체에 사정에 따라
+            변경 될 수 있습니다.</dd>
+          <dd>경품은 양도 및 양수가 되지 않으며, 타상품으로 교환 및 환불이 불가능 합니다.</dd>
+        </dl>
+      </article>
+      <!-- 캠핑 이벤트 상세(e) -->
+    </section>
+  </div>
+
+  <!-- 공통 알럿 팝업(s) -->
+  <article class="popup popup-alert">
+    <div class="popup__box">
+      <span class="button__close">close</span>
+      <p class="popup-alert__msg">
+        메세지를 입력해주세요.
+      </p>
+      <div class="popup-alert__button">
+        <button type="button" class="button__type5">확인</button>
+      </div>
+    </div>
+  </article>
+  <!-- 공통 알럿 팝업(e) -->
+
+  <!-- 굿즈 소개 이미지 팝업(s) -->
+  <article class="popup popup-image popup-goods">
+    <div class="popup__box">
+      <span class="button__close" onclick="popupClose($(this))">close</span>
+      <section class="popup__contents">
+        <ul class="popup-goods__list">
+          <!--
+          팝업 오픈 시, 번호에 따라 분기 처리.
+          얼리버드 신청 링크가 다를 때, data-link : 얼리버드 신청하러 가기 링크
+          얼리버드 신청 링크가 같을 때, 하단에 버튼에 링크
+          -->
+          <li data-goods="1">
+            goods1
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          </li>
+          <li data-goods="2" data-link="http://daum.net">
+            goods2
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          </li>
+          <li data-goods="3" data-link="http://naver.com">
+            goods3
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          </li>
+          <li data-goods="4" data-link="http://daum.net">
+            goods4
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          </li>
+        </ul>
+      </section>
+      <div class="popup__buttons">
+        <button type="button" class="button__type5" onclick="popupClose($(this))">
+          확인
+        </button>
+      </div>
+    </div>
+  </article>
+  <!-- 굿즈 소개 이미지 팝업(s) -->
+
+  <!-- 개인정보 관련 팝업(s) -->
+  <article class="popup popup-privacy">
+    <div class="popup__box">
+      <span class="button__close" onclick="popupClose($(this))">close</span>
+      <section class="popup__contents">
+        <p class="popup__title">
+          개인정보 수집·이용 및<br />취급위탁 내용을 확인하고 동의
+        </p>
+        <p class="text1">
+          이벤트 참여와 관련하여, 본인의 개인정보를<br />SK텔레콤 주식회사가 수집 및 이용하는 것에 동의합니다.
+        </p>
+        <table>
+          <colgroup>
+            <col width="30.5%" />
+            <col width="*" />
+          </colgroup>
+          <tr>
+            <th>수집/이용 목적</th>
+            <td>
+              이벤트 진행, 본인 확인, 고객 응대,
+              당첨안내, 주소 확인 및 경품 배송
+            </td>
+          </tr>
+          <tr>
+            <th>수집항목</th>
+            <td>
+              이름, 휴대폰 번호, 인스타그램 아이디
+            </td>
+          </tr>
+          <tr>
+            <th>보유기간</th>
+            <td>
+              이벤트 종료 후 당첨 확인, 고객 응대 등을
+              위하여 3개월간 보관 후 파기 합니다.<br />
+              단, 고객의 동의를 얻었거나 법령상<br />
+              일정 기간 보관할 의무가 있는 경우에는<br />
+              해당 기간 동안 보관할 수 있습니다.
+            </td>
+          </tr>
+        </table>
+        <table>
+          <colgroup>
+            <col width="46.6%" />
+            <col width="*" />
+          </colgroup>
+          <tr>
+            <th>수탁사</th>
+            <th>업무내용</th>
+          </tr>
+          <tr>
+            <td>
+              (주)에스엠컬처앤콘텐츠<br />
+              광고사업부분
+            </td>
+            <td>
+              총괄대행
+            </td>
+          </tr>
+          <tr>
+            <td>메이데이 파트너스</td>
+            <td>이벤트 시스템운영, 고객 상담</td>
+          </tr>
+          <tr>
+            <td>NICE 평가정보(주)</td>
+            <td>본인확인</td>
+          </tr>
+        </table>
+        <ul>
+          <li>
+            본 동의는 이벤트 응모를 위한 개인정보 수집/이용에 대한 동의로서,<br />
+            동의를 거부 할 권리가 있으나, 동의하지 않을 경우 이벤트에 응모하실 수
+            없습니다.
+          </li>
+          <li>
+            법령에 따른 개인정보의 수집/이용, 계약의 이행/편의증진을 위한<br />
+            개인정보 처리 위탁 및 개인정보처리와 관란된 일반사항은 서비스이
+            개인정보 처리 방첨에 따릅니다.
+          </li>
+        </ul>
+      </section>
+      <div class="popup__buttons">
+        <button type="button" class="button__type5" onclick="popupClose($(this))">
+          확인
+        </button>
+      </div>
+    </div>
+  </article>
+  <!-- 개인정보 관련 팝업(s) -->
+
+  <!-- 나의 신청 보기 팝업(s) -->
+  <article class="popup popup-my">
+    <div class="popup__box">
+      <span class="button__close" onclick="popupClose($(this))">close</span>
+      <section class="popup__contents">
+        <p class="popup__title">나의 신청 현황</p>
+        <ul class="popup-my__info">
+          <li>
+            <span>선택 굿즈</span>
+            <em>사죠영 자이언트 빈백</em>
+          </li>
+          <li>
+            <span>이름</span>
+            <em>가나다</em>
+          </li>
+          <li>
+            <span>인스타그램 ID</span>
+            <em>인스타아이디</em>
+          </li>
+        </ul>
+      </section>
+      <div class="popup__buttons">
+        <button type="button" class="button__type5" onclick="popupClose($(this))">
+          확인
+        </button>
+      </div>
+    </div>
+  </article>
+  <!-- 나의 신청 보기 팝업(s) -->
+
+  <!-- 신청 팝업(s) -->
+  <article class="popup popup-form">
+    <div class="popup__box">
+      <span class="button__close" onclick="popupClose($(this))">close</span>
+      <section class="popup__contents">
+        <p class="popup__title">(이벤트 타이틀) 신청하기</p>
+        <p class="text1">이벤트 소개 카피 2~3줄 삽입<br />이벤트 참여와 관련하여 이용하는 것에 동의합니다.</p>
+        <ul class="popup-form__inputs">
+          <li data-alert="goods">
+            <span class="label">필수사항</span>
+            <select>
+              <option value="0" disabled selected>희망 굿즈를 선택하세요</option>
+              <option value="1">사죠영 자이언트 빈백</option>
+              <option value="2">사죠영 크루저보드</option>
+            </select>
+          </li>
+          <li>
+            <span class="label">선택사항</span>
+            <input type="text" placeholder="인스타그램 아이디를 입력하세요" />
+          </li>
+        </ul>
+        <dl>
+          <dt>유의사항</dt>
+          <dd>T다이렉트샵 카카오톡채널에서 사죠영 얼리버드를 등록한 고객 대상으로 추첨합니다.</dd>
+          <dd>당첨 고객에게 개별적으로 안내됩니다.</dd>
+        </dl>
+      </section>
+      <div class="popup__buttons">
+        <button type="button" class="button__type5" onclick="apply()">
+          확인
+        </button>
+      </div>
+    </div>
+  </article>
+  <!-- 신청 팝업(s) -->
+
+  <!-- alert 팝업 실행 :: 개발 시 삭제 -->
+  <div class="sr-links">
+    <a href="javascript:popupOpen('goods', 1)">굿즈1 소개</a>
+    <a href="javascript:popupOpen('goods', 2)">굿즈2 소개</a>
+    <a href="javascript:popupOpen('privacy')">개인정보</a>
+    <a href="javascript:popupOpen('form')">신청</a>
+    <a href="javascript:popupOpen('my')">나의 신청 보기</a>
+    <br />
+    <a href="javascript:alertPopup(true, 'ready');">준비 중</a>
+    <a href="javascript:alertPopup(true, 'privacy');">개인정보</a>
+    <a href="javascript:alertPopup(true, 'loginAfter');">로그인 안내</a>
+    <a href="javascript:alertPopup(true, 'complete');">이벤트 참여완료</a>
+    <a href="javascript:alertPopup(true, 'noData');">신청 정보가 없음</a>
+    <a href="javascript:alertPopup(true, 'end');">캠핑인더시티 이벤트 종료</a>
+    <a href="javascript:alertPopup(true, '14세 이상인 고객님만<br />참여할 수 있습니다.');">14세</a>
+  </div>
+
+  <script type="text/javascript">
+    $('.event__info-agree input:checkbox').off('click').on('click', function() {
+      if ($(this).is(':checked')) {
+        alertPopup(true, '14세 이상인 고객님만<br />참여할 수 있습니다.');
+      }
+    });
+    function apply () {
+      if (!inputChecked()) {
+        return false;
+      }
+      // 신청하기 진행
+      popupClose($('.popup-form'))
+    }
+  </script>
+</body>
+</html>
+
