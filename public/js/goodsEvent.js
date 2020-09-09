@@ -124,8 +124,8 @@ function infoToon () {
   });
 }
 
-function infoToonPopup () {
-  var $obj = $('.popup-toon');
+function infoPopup () {
+  var $obj = $('.popup-info');
   if ($obj.length === 0) return false;
   var $owl = $obj.find('.owl-carousel');
   $owl.owlCarousel({

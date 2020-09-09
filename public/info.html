@@ -19,7 +19,7 @@
     <section class="camping__tab">
       <span class="button__back">back</span>
       <ul>
-        <li><a href="index.html">사줘영</a></li>
+        <li><a href="index.html">사죠영</a></li>
         <li class="active"><a href="info.html">소개</a></li>
         <li><a href="goods.html">굿즈</a></li>
         <li><a href="event.html">이벤트</a></li>
@@ -30,7 +30,7 @@
       <!-- 캠핑 소개 상단(s) -->
       <article class="info__top">
         <img src="images/info/top.png" alt="사죠영이 누군지 궁금해?" />
-        <a href="#">프로필 보기</a>
+        <a href="javascript:popupOpen('info');">프로필 보기</a>
       </article>
       <!-- 캠핑 소개 상단(e) -->
 
@@ -52,19 +52,19 @@
           <section class="owl-carousel">
             <!-- 해당 회차 링크 data-link=""에 셋팅 -->
             <div class="item" data-link="http://naver.com">
-              <div onclick="popupOpen('toon1');">
+              <div>
                 <img src="images/info/toon_big1.jpg" alt="" />
               </div>
             </div>
             <!-- 해당 회차 링크 data-link=""에 셋팅 -->
             <div class="item" data-link="http://nate.com">
-              <div onclick="popupOpen('toon2');">
+              <div>
                 <img src="images/info/toon_big2.jpg" alt="" />
               </div>
             </div>
             <!-- 해당 회차 링크 data-link=""에 셋팅 -->
             <div class="item" data-link="http://nate.com">
-              <div onclick="popupOpen('toon2');">
+              <div>
                 <img src="images/info/toon_big2.jpg" alt="" />
               </div>
             </div>
@@ -151,66 +151,68 @@
   </article>
   <!-- 캠핑인더시티 신청방법(s) -->
 
-  <!-- 사죠영 인스타툰 1화(s) -->
-  <article class="popup popup-toon popup-toon1">
+  <!-- 사죠영 프로필(s) -->
+  <article class="popup popup-info">
     <div class="popup__box">
       <span class="button__close" onclick="popupClose($(this))">close</span>
       <section class="popup__contents">
         <article class="owl-carousel">
           <div class="item">
-            <div class="popup-toon__image">
+            <div class="popup-info__image">
               <img src="images/info/toon1_1.png" alt="" />
             </div>
-            <div class="popup-toon__info">
-              <p class="popup-toon__title">
-                내 이름은 죠르..ㄷ<br />
-                아니, 사.죠.영!&#129323;
+            <div class="popup-info__info">
+              <p class="popup-info__title">
+                안녕? 난 20살 사죠영!
               </p>
-              <div class="popup-toon__text">
+              <div class="popup-info__text">
                 <p>(아마도?!)1억 살의 화석 공룡 죠르디는<br />
-                  어느 날 사과폰이 갖고 싶어졌어요.<br />
-                  사과폰을 가지려면 0해야만 한다지 뭐예요?!</p>
+                  어느 날 사과폰이 갖고 싶어졌어요.</p>
+                <p>사과폰을 가지려면 0한동에 가서<br />
+                  어떤 ‘새’를 만나야 한다지 뭐예요?</p>
                 <p>앙몬드 요정의 도움으로 20살로 거듭난<br />
-                  죠르..ㄷ, 아니 사죠영!</p>
-                <p>가장 특별한 사과폰을 위해 신비의 새<br />
-                  ‘Bird of Early’를 찾아 모험을 떠나는데?!</p>
+                  죠르..ㄷ, 아니 사죠영은<br />
+                  가장 특별한 사과폰을 위해<br />
+                  신비의 새 ‘얼리버드’를 찾아 떠나는데?!</p>
               </div>
             </div>
           </div>
           <div class="item">
-            <div class="popup-toon__image">
+            <div class="popup-info__image">
               <img src="images/info/toon1_2.png" alt="" />
             </div>
-            <div class="popup-toon__info">
-              <p class="popup-toon__title">
-                24시간이 모자라,<br />
-                절대 버킷햇 못잃어&#129315;
+            <div class="popup-info__info">
+              <p class="popup-info__title">
+                버킷햇 절대 못잃어!
               </p>
-              <div class="popup-toon__text">
+              <div class="popup-info__text">
                 <p>옷 가게 알바할 때 써봤는데<br />
-                  다른 알바생이 0해 보인다고 했다며<br />
-                  사과폰을 갖겠다는 일념 하에<br />
-                  아무리 더워도 절대 벗지 않아요
-                </p>
-                <p class="point1">버킷햇따위 안 써도 귀여운 걸,<br />
-                  본인만 모른다는 게 넘나 귀여워영!</p>
+                  얼마나 잘 어울렸는지 그날 매출 대박!<br />
+                  ‘그 버킷햇 얼마예요?’라고<br />
+                  손님들이 다들 물어봤잖아요.</p>
+                <p>사과폰을 갖겠다는 일념 하에<br />
+                  아껴둔 인생템 대방출!</p>
+                <p class="point1">버킷햇으로 180도 달라진<br />
+                  사죠영의 이야기를 기대해주세요!</p>
               </div>
             </div>
           </div>
           <div class="item">
-            <div class="popup-toon__image">
+            <div class="popup-info__image">
               <img src="images/info/toon1_3.png" alt="" />
             </div>
-            <div class="popup-toon__info">
-              <p class="popup-toon__title">
-                볼터치로 완성한<br />
-                딸기쫀득찹쌀치크&#128536;
+            <div class="popup-info__info">
+              <p class="popup-info__title">
+                딸기우유 볼따구
               </p>
-              <div class="popup-toon__text">
-                <p>겨울쿨인 사죠영에게 착붙!</p>
-                <p>화사하면서 은은한 핑키쉬 블러셔로<br />
-                  더욱 0해 보이고 사랑스러운<br />
-                  딸기찹쌀떡 같은 치크로 표현해봤어</p>
+              <div class="popup-info__text">
+                <p>겨울쿨인 사죠영에게 찰떡인<br />
+                  화사하고 러블리한 딸기우유 블러셔로<br />
+                  더욱 0해 보이게 연출해봤어.</p>
+                <p>쫀쫀한 양 볼따구가<br />
+                  마치 딸기찹살떡 같지 않니?<br />
+                  웃을 때 처진 눈꼬리를<br />
+                  더욱 돋보이게 해♥</p>
                 <p class="point2">Make up by. 앙몬드요정</p>
               </div>
             </div>
@@ -219,81 +221,12 @@
       </section>
     </div>
   </article>
-  <!-- 사죠영 인스타툰 1화(e) -->
-
-  <!-- 사죠영 인스타툰 2화(s) -->
-  <article class="popup popup-toon popup-toon2">
-    <div class="popup__box">
-      <span class="button__close" onclick="popupClose($(this))">close</span>
-      <section class="popup__contents">
-        <article class="owl-carousel">
-          <div class="item">
-            <div class="popup-toon__image">
-              <img src="images/info/toon1_1.png" alt="" />
-            </div>
-            <div class="popup-toon__info">
-              <p class="popup-toon__title">
-                내 이름은 죠르..ㄷ<br />
-                아니, 사.죠.영!&#129323;
-              </p>
-              <div class="popup-toon__text">
-                <p>(아마도?!)1억 살의 화석 공룡 죠르디는<br />
-                  어느 날 사과폰이 갖고 싶어졌어요.<br />
-                  사과폰을 가지려면 0해야만 한다지 뭐예요?!</p>
-                <p>앙몬드 요정의 도움으로 20살로 거듭난<br />
-                  죠르..ㄷ, 아니 사죠영!</p>
-                <p>가장 특별한 사과폰을 위해 신비의 새<br />
-                  ‘Bird of Early’를 찾아 모험을 떠나는데?!</p>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="popup-toon__image">
-              <img src="images/info/toon1_2.png" alt="" />
-            </div>
-            <div class="popup-toon__info">
-              <p class="popup-toon__title">
-                24시간이 모자라,<br />
-                절대 버킷햇 못잃어&#129315;
-              </p>
-              <div class="popup-toon__text">
-                <p>옷 가게 알바할 때 써봤는데<br />
-                  다른 알바생이 0해 보인다고 했다며<br />
-                  사과폰을 갖겠다는 일념 하에<br />
-                  아무리 더워도 절대 벗지 않아요
-                </p>
-                <p class="point1">버킷햇따위 안 써도 귀여운 걸,<br />
-                  본인만 모른다는 게 넘나 귀여워영!</p>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="popup-toon__image">
-              <img src="images/info/toon1_3.png" alt="" />
-            </div>
-            <div class="popup-toon__info">
-              <p class="popup-toon__title">
-                볼터치로 완성한<br />
-                딸기쫀득찹쌀치크&#128536;
-              </p>
-              <div class="popup-toon__text">
-                <p>겨울쿨인 사죠영에게 착붙!</p>
-                <p>화사하면서 은은한 핑키쉬 블러셔로<br />
-                  더욱 0해 보이고 사랑스러운<br />
-                  딸기찹쌀떡 같은 치크로 표현해봤어</p>
-                <p class="point2">Make up by. 앙몬드요정</p>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-    </div>
-  </article>
-  <!-- 사죠영 인스타툰 2화(e) -->
+  <!-- 사죠영 프로필 1화(e) -->
 
   <!-- alert 팝업 실행 :: 개발 시 삭제 -->
   <div class="sr-links">
     <a href="javascript:popupOpen('kakao')">카카오톡 채널 바로가기</a>
+    <a href="javascript:popupOpen('info')">프로필</a>
     <!--
     <a href="javascript:alertPopup(true, 'already');">이미참여</a>
     -->
@@ -302,7 +235,7 @@
   <script type="text/javascript">
     infoQa();
     infoToon();
-    infoToonPopup();
+    infoPopup();
   </script>
 </body>
 </html>
