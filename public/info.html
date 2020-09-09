@@ -29,15 +29,15 @@
     <section class="camping__content">
       <!-- 캠핑 소개 상단(s) -->
       <article class="info__top">
-        <img src="images/info/top.png" alt="내가 누군지 궁금해?" />
-        <a href="#">사죠영 프로필 보기</a>
+        <img src="images/info/top.png" alt="사죠영이 누군지 궁금해?" />
+        <a href="#">프로필 보기</a>
       </article>
       <!-- 캠핑 소개 상단(e) -->
 
       <!-- 캠핑 특전(s) -->
       <article class="info__benefits">
-        <img src="images/info/benefits.png" alt="얼리버드 특전" />
-        <a href="#">얼리버드 신청해영</a>
+        <img src="images/info/benefits.png" alt="새로운 아이폰 미리미리 관심 등록! 사죠영 얼리버드 특전" />
+        <a href="javascript:popupOpen('kakao');">T다이렉트샵 카카오톡채널에서 얼리버드 신청해영</a>
       </article>
       <!-- 캠핑 특전(e) -->
 
@@ -131,6 +131,25 @@
       <!-- 캠핑 소개 12문 12답(e) -->
     </section>
   </div>
+
+  <!-- 캠핑인더시티 신청방법(s) -->
+  <article class="popup popup-image popup-kakao">
+    <div class="popup__box">
+      <span class="button__close" onclick="popupClose($(this))">close</span>
+      <section class="popup__contents">
+        채널 바로가기 내용
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      </section>
+      <div class="popup__buttons">
+        <button type="button" class="button__type5" onclick="popupClose($(this))">
+          T다이렉트샵 카카오톡 채널 바로가기
+        </button>
+      </div>
+    </div>
+  </article>
+  <!-- 캠핑인더시티 신청방법(s) -->
 
   <!-- 사죠영 인스타툰 1화(s) -->
   <article class="popup popup-toon popup-toon1">
@@ -271,6 +290,14 @@
     </div>
   </article>
   <!-- 사죠영 인스타툰 2화(e) -->
+
+  <!-- alert 팝업 실행 :: 개발 시 삭제 -->
+  <div class="sr-links">
+    <a href="javascript:popupOpen('kakao')">카카오톡 채널 바로가기</a>
+    <!--
+    <a href="javascript:alertPopup(true, 'already');">이미참여</a>
+    -->
+  </div>
 
   <script type="text/javascript">
     infoQa();

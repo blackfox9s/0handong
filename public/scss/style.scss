@@ -436,23 +436,33 @@ body {
       display: block;
       position: absolute;
       background: transparent;
-      top: rem(229);
+      top: rem(239);
       left: rem(40);
-      width: 44%;
+      width: 32%;
       height: rem(40);
       font-size: 0;
       z-index: 2;
     }
   }
 
+  &__benefits,
+  &__toon,
+  &__qa {
+    border-radius: rem(80) 0 0;
+    overflow: hidden;
+    margin-top: rem(-80);
+  }
+
   &__benefits {
     position: relative;
+    padding-bottom: rem(80);
+    background: #8feccc;
 
     a {
       display: block;
       position: absolute;
       background: transparent;
-      bottom: rem(155);
+      bottom: rem(230);
       left: 50%;
       width: 87%;
       height: rem(120);
@@ -463,6 +473,9 @@ body {
   }
 
   &__toon {
+    background: #f9c1c9;
+    padding-bottom: rem(230);
+
     &-title {
       position: relative;
       margin-bottom: rem(21);
@@ -495,7 +508,7 @@ body {
     }
 
     &-nav {
-      margin: rem(80) 0 rem(150);
+      margin: rem(80) 0 0;
       padding: 0 rem(39);
 
       ul {
@@ -603,7 +616,6 @@ body {
   }
 
   &__qa {
-    margin: rem(40) 0 0;
     padding-bottom: rem(100);
 
     .item {
@@ -1187,7 +1199,7 @@ body {
   }
 
   &-toon {
-    &__box {
+    .popup__box {
       .button__close {
         top: rem(22);
         right: rem(22);
@@ -1253,6 +1265,27 @@ body {
       }
       .point1 {color: #16c287;}
       .point2 {color: #ff8181; margin-top: rem(35);}
+    }
+  }
+
+  &-kakao {
+    .popup__box {
+      .button__close {
+        top: rem(22);
+        right: rem(22);
+        width: rem(86);
+        height: rem(86);
+        background-image: url('../images/pop_close2.png');
+      }
+    }
+
+    .popup__contents {
+      margin-top: rem(100);
+    }
+
+    .button__type5 {
+      width: 100%;
+      padding: 0;
     }
   }
 }
