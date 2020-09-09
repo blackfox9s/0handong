@@ -6,9 +6,11 @@
   <title>한동</title>
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=no" />
   <link rel='stylesheet' type='text/css' href='css/common.css'/>
+  <link rel='stylesheet' type='text/css' href='css/owl.carousel.min.css'/>
   <link rel='stylesheet' type='text/css' href='css/style.css'/>
   <script type="text/javascript" src='js/jquery.min.js'></script>
   <script type="text/javascript" src='js/slick.min.js'></script>
+  <script type="text/javascript" src='js/owl.carousel.min.js'></script>
   <script type="text/javascript" src='js/goodsEvent.js'></script>
   <script type="text/javascript" src="/appweb/js/layout/layout.js"></script>
 </head>
@@ -27,78 +29,254 @@
     <section class="camping__content">
       <!-- 캠핑 소개 상단(s) -->
       <article class="info__top">
-        <img src="images/info/top.jpg" alt="요즘것들 위한 요즘것들끼리 사죠영" />
+        <img src="images/info/top.png" alt="내가 누군지 궁금해?" />
+        <a href="#">사죠영 프로필 보기</a>
       </article>
       <!-- 캠핑 소개 상단(e) -->
 
+      <!-- 캠핑 특전(s) -->
+      <article class="info__benefits">
+        <img src="images/info/benefits.png" alt="얼리버드 특전" />
+        <a href="#">얼리버드 신청해영</a>
+      </article>
+      <!-- 캠핑 특전(e) -->
+
       <!-- 캠핑 소개 인스타툰 리스트(s) -->
-      <article class="info__toon">
-        <p class="info__toon-title">사죠영의 일상</p>
-        <ul class="info__toon-list">
-          <li>
-            <a href="#">
-              <span class="thumb"></span>
-              <p class="title">
-                간절히 원하다면<br />
-                죠르디 24시
-              </p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="thumb"></span>
-              <p class="title">
-                간절히 원하다면<br />
-                죠르디 24시
-              </p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="thumb"></span>
-              <p class="title">
-                간절히 원하다면<br />
-                죠르디 24시
-              </p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span class="thumb"></span>
-              <p class="title">
-                간절히 원하다면<br />
-                죠르디 24시
-              </p>
-            </a>
-          </li>
-        </ul>
-        <a href="#" class="button__toon">니니즈 인스타툰 보기</a>
+      <!-- data-current="1" 해당 활성화 회차 -->
+      <article class="info__toon" data-current="1">
+        <p class="info__toon-title">
+          <img src="images/info/toon_title.png" alt="사죠영 인스타튠" />
+          <span><em></em>화</span>
+        </p>
+        <div class="info__toon-list">
+          <section class="owl-carousel">
+            <!-- 해당 회차 링크 data-link=""에 셋팅 -->
+            <div class="item" data-link="http://naver.com">
+              <div onclick="popupOpen('toon1');">
+                <img src="images/info/toon_big1.jpg" alt="" />
+              </div>
+            </div>
+            <!-- 해당 회차 링크 data-link=""에 셋팅 -->
+            <div class="item" data-link="http://nate.com">
+              <div onclick="popupOpen('toon2');">
+                <img src="images/info/toon_big2.jpg" alt="" />
+              </div>
+            </div>
+            <!-- 해당 회차 링크 data-link=""에 셋팅 -->
+            <div class="item" data-link="http://nate.com">
+              <div onclick="popupOpen('toon2');">
+                <img src="images/info/toon_big2.jpg" alt="" />
+              </div>
+            </div>
+          </section>
+          <a href="#" class="button__arrow" target="_blank">인스타 바로가기</a>
+        </div>
+        <div class="info__toon-nav">
+          <ul>
+            <li><span><i>01</i><img src="images/info/nav1.png" /></span></li>
+            <li><span><i>02</i><img src="images/info/nav2.png" /></span></li>
+            <li><span><i>03</i><img src="images/info/nav3.png" /></span></li>
+            <li class="disabled"><span><img src="images/info/nav_comming.png" alt="커밍순" /></span></li>
+            <li class="disabled"><span><img src="images/info/nav_comming.png" alt="커밍순" /></span></li>
+            <li class="disabled"><span><img src="images/info/nav_comming.png" alt="커밍순" /></span></li>
+          </ul>
+        </div>
       </article>
       <!-- 캠핑 소개 인스타툰 리스트(e) -->
 
-      <!-- 캠핑 소개 배너(s) -->
-      <article class="info__banners">
-        <ul>
-          <li>
-            <a href="#">
-              <img src="images/info/banner1.jpg" alt="더많은 사죠영이야기 니니즈 인스타그램"/>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/info/banner2.jpg" alt="간절히 원한다면 채널톡에 말해봐~"/>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/info/banner3.jpg" alt="얼리버드 사조영 힙색 알림받고 찐 구매하자 "/>
-            </a>
-          </li>
-        </ul>
+      <!-- 캠핑 소개 12문 12답(s) -->
+      <article class="info__qa">
+        <p class="info__qa-title">
+          <img src="images/info/qa_title.png" alt="사죠영 12문 12답" />
+        </p>
+        <div class="owl-carousel">
+          <div class="item">
+            <img src="images/info/qa01.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/info/qa02.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/info/qa03.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/info/qa04.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/info/qa05.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/info/qa06.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/info/qa07.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/info/qa08.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/info/qa09.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/info/qa10.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/info/qa11.png" alt="" />
+          </div>
+          <div class="item">
+            <img src="images/info/qa12.png" alt="" />
+          </div>
+        </div>
       </article>
-      <!-- 캠핑 소개 배너(e) -->
+      <!-- 캠핑 소개 12문 12답(e) -->
     </section>
   </div>
+
+  <!-- 사죠영 인스타툰 1화(s) -->
+  <article class="popup popup-toon popup-toon1">
+    <div class="popup__box">
+      <span class="button__close" onclick="popupClose($(this))">close</span>
+      <section class="popup__contents">
+        <article class="owl-carousel">
+          <div class="item">
+            <div class="popup-toon__image">
+              <img src="images/info/toon1_1.png" alt="" />
+            </div>
+            <div class="popup-toon__info">
+              <p class="popup-toon__title">
+                내 이름은 죠르..ㄷ<br />
+                아니, 사.죠.영!&#129323;
+              </p>
+              <div class="popup-toon__text">
+                <p>(아마도?!)1억 살의 화석 공룡 죠르디는<br />
+                  어느 날 사과폰이 갖고 싶어졌어요.<br />
+                  사과폰을 가지려면 0해야만 한다지 뭐예요?!</p>
+                <p>앙몬드 요정의 도움으로 20살로 거듭난<br />
+                  죠르..ㄷ, 아니 사죠영!</p>
+                <p>가장 특별한 사과폰을 위해 신비의 새<br />
+                  ‘Bird of Early’를 찾아 모험을 떠나는데?!</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="popup-toon__image">
+              <img src="images/info/toon1_2.png" alt="" />
+            </div>
+            <div class="popup-toon__info">
+              <p class="popup-toon__title">
+                24시간이 모자라,<br />
+                절대 버킷햇 못잃어&#129315;
+              </p>
+              <div class="popup-toon__text">
+                <p>옷 가게 알바할 때 써봤는데<br />
+                  다른 알바생이 0해 보인다고 했다며<br />
+                  사과폰을 갖겠다는 일념 하에<br />
+                  아무리 더워도 절대 벗지 않아요
+                </p>
+                <p class="point1">버킷햇따위 안 써도 귀여운 걸,<br />
+                  본인만 모른다는 게 넘나 귀여워영!</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="popup-toon__image">
+              <img src="images/info/toon1_3.png" alt="" />
+            </div>
+            <div class="popup-toon__info">
+              <p class="popup-toon__title">
+                볼터치로 완성한<br />
+                딸기쫀득찹쌀치크&#128536;
+              </p>
+              <div class="popup-toon__text">
+                <p>겨울쿨인 사죠영에게 착붙!</p>
+                <p>화사하면서 은은한 핑키쉬 블러셔로<br />
+                  더욱 0해 보이고 사랑스러운<br />
+                  딸기찹쌀떡 같은 치크로 표현해봤어</p>
+                <p class="point2">Make up by. 앙몬드요정</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </article>
+  <!-- 사죠영 인스타툰 1화(e) -->
+
+  <!-- 사죠영 인스타툰 2화(s) -->
+  <article class="popup popup-toon popup-toon2">
+    <div class="popup__box">
+      <span class="button__close" onclick="popupClose($(this))">close</span>
+      <section class="popup__contents">
+        <article class="owl-carousel">
+          <div class="item">
+            <div class="popup-toon__image">
+              <img src="images/info/toon1_1.png" alt="" />
+            </div>
+            <div class="popup-toon__info">
+              <p class="popup-toon__title">
+                내 이름은 죠르..ㄷ<br />
+                아니, 사.죠.영!&#129323;
+              </p>
+              <div class="popup-toon__text">
+                <p>(아마도?!)1억 살의 화석 공룡 죠르디는<br />
+                  어느 날 사과폰이 갖고 싶어졌어요.<br />
+                  사과폰을 가지려면 0해야만 한다지 뭐예요?!</p>
+                <p>앙몬드 요정의 도움으로 20살로 거듭난<br />
+                  죠르..ㄷ, 아니 사죠영!</p>
+                <p>가장 특별한 사과폰을 위해 신비의 새<br />
+                  ‘Bird of Early’를 찾아 모험을 떠나는데?!</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="popup-toon__image">
+              <img src="images/info/toon1_2.png" alt="" />
+            </div>
+            <div class="popup-toon__info">
+              <p class="popup-toon__title">
+                24시간이 모자라,<br />
+                절대 버킷햇 못잃어&#129315;
+              </p>
+              <div class="popup-toon__text">
+                <p>옷 가게 알바할 때 써봤는데<br />
+                  다른 알바생이 0해 보인다고 했다며<br />
+                  사과폰을 갖겠다는 일념 하에<br />
+                  아무리 더워도 절대 벗지 않아요
+                </p>
+                <p class="point1">버킷햇따위 안 써도 귀여운 걸,<br />
+                  본인만 모른다는 게 넘나 귀여워영!</p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="popup-toon__image">
+              <img src="images/info/toon1_3.png" alt="" />
+            </div>
+            <div class="popup-toon__info">
+              <p class="popup-toon__title">
+                볼터치로 완성한<br />
+                딸기쫀득찹쌀치크&#128536;
+              </p>
+              <div class="popup-toon__text">
+                <p>겨울쿨인 사죠영에게 착붙!</p>
+                <p>화사하면서 은은한 핑키쉬 블러셔로<br />
+                  더욱 0해 보이고 사랑스러운<br />
+                  딸기찹쌀떡 같은 치크로 표현해봤어</p>
+                <p class="point2">Make up by. 앙몬드요정</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </article>
+  <!-- 사죠영 인스타툰 2화(e) -->
+
+  <script type="text/javascript">
+    infoQa();
+    infoToon();
+    infoToonPopup();
+  </script>
 </body>
 </html>
 

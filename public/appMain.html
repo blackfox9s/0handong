@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>한동</title>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=no" />
+  <link rel='stylesheet' type='text/css' href='css/common.css'/>
+  <script type="text/javascript" src='js/jquery.min.js'></script>
+  <script type="text/javascript" src="/appweb/js/layout/layout.js"></script>
+</head>
+<body>
+
+<style>
+  .intro-app-popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.75);
+    z-index: 1000;
+  }
+  .intro-app-popup__image {
+    width: 72%;
+    max-width: 540px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .intro-app-popup__image img {
+    max-width: 100%;
+  }
+  .intro-app-popup__image a {
+    background: transparent;
+    position: absolute;
+    font-size: 0;
+  }
+  .intro-app-popup__close {
+    z-index: 2;
+    right: 0;
+    top: 0;
+    width: 11%;
+    height: 10.5%;
+  }
+  .intro-app-popup__go {
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+  }
+  .intro-app-banner {
+    position: fixed;
+    right: 3.4%;
+    width: 33.2%;
+    bottom: 5%;
+  }
+  .intro-app-banner img {
+    max-width: 100%;
+  }
+</style>
+
+<article class="intro-app-popup">
+  <div class="intro-app-popup__image">
+    <img src="images/intro_popup.png" alt="사죠영" />
+    <a href="javascript:void(0);" class="intro-app-popup__close" onclick="$(this).parents('.intro-app-popup').hide();">닫기</a>
+    <a href="#" class="intro-app-popup__go">바로가기</a>
+  </div>
+</article>
+
+<article class="intro-app-banner">
+  <a href="#">
+    <img src="images/intro_floating.png" alt="사죠영" />
+  </a>
+</article>
+
+<script>
+
+</script>
+</body>
+</html>
+

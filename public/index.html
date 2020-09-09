@@ -6,10 +6,11 @@
   <title>한동</title>
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,user-scalable=no" />
   <link rel='stylesheet' type='text/css' href='css/common.css'/>
-  <link rel='stylesheet' type='text/css' href='css/slick.css'/>
+  <link rel='stylesheet' type='text/css' href='css/owl.carousel.min.css'/>
   <link rel='stylesheet' type='text/css' href='css/style.css'/>
   <script type="text/javascript" src='js/jquery.min.js'></script>
   <script type="text/javascript" src='js/slick.min.js'></script>
+  <script type="text/javascript" src='js/owl.carousel.min.js'></script>
   <script type="text/javascript" src='js/goodsEvent.js'></script>
   <script type="text/javascript" src="/appweb/js/layout/layout.js"></script>
 </head>
@@ -28,51 +29,43 @@
     <section class="camping__content">
       <!-- 캠핑 홈 상단(s) -->
       <article class="home__timer">
-        <em>53</em>
-        <span>일</span>
-        <em>12<i>:</i>39</em>
+        <p>아이폰12 사전구매까지</p>
+        <em>D-253</em>
       </article>
-      <article class="home__top-slide">
-        <ul class="slick-lists">
-          <li>
-            <div class="top-slide-box">
-              <img src="images/home/top1.jpg" alt="" />
-            </div>
-            <span class="top-slide-character">
-              <img src="images/home/top1_char.png" alt="" />
-            </span>
-          </li>
-          <li>
-            <div class="top-slide-box">
-              <img src="images/home/top2.jpg" alt="" />
-            </div>
-            <span class="top-slide-character">
-              <img src="images/home/top1_char.png" alt="" />
-            </span>
-          </li>
-        </ul>
+      <article class="home__top">
+        <a href="#">
+          <img src="images/home/top.png" alt="사죠영 이슈1, 사과폰을 가지려면 0해져야 한다고? 사죠영" />
+        </a>
       </article>
       <!-- 캠핑 홈 상단(e) -->
 
       <!-- 캠핑 홈 배너(s) -->
       <article class="home__banners">
-        <div class="home__banners-type1">
-          <div class="slick-lists">
-            <div class="slick-item">
-              <a href="#"><img src="images/home/goods1.png" alt="" /></a>
-            </div>
-            <div class="slick-item">
-              <a href="#"><img src="images/home/goods2.png" alt="" /></a>
-            </div>
-            <div class="slick-item">
-              <a href="#"><img src="images/home/goods3.png" alt="" /></a>
-            </div>
+        <div class="owl-carousel">
+          <div class="item">
+            <a href="#">
+              <div><img src="images/home/event1.png" alt="사죠영 리미티디 에디숀 얼리버드 open" /></div>
+              <span class="button__plus">+</span>
+            </a>
           </div>
-        </div>
-        <div class="home__banners-type2">
-          <a href="#">
-            <img src="images/home/banner_event.png" alt="도심 속 캠핑, 캠핑인더시티" />
-          </a>
+          <div class="item">
+            <a href="#">
+              <div><img src="images/home/event2.png" alt="도심 속 감성 캠핑하자" /></div>
+              <span class="button__plus">+</span>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <div><img src="images/home/event1.png" alt="사죠영 리미티디 에디숀 얼리버드 open" /></div>
+              <span class="button__plus">+</span>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <div><img src="images/home/event2.png" alt="도심 속 감성 캠핑하자" /></div>
+              <span class="button__plus">+</span>
+            </a>
+          </div>
         </div>
       </article>
       <!-- 캠핑 홈 배너(e) -->
@@ -82,22 +75,17 @@
         <ul>
           <li>
             <a href="#">
-              <img src="images/home/link1.png" alt="인스타툰" />
+              <img src="images/home/link1.jpg" alt="인스타툰" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="images/home/link2.png" alt="T다이렉트" />
+              <img src="images/home/link2.jpg" alt="T다이렉트" />
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="images/home/link3.png" alt="톡채널" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/home/link4.png" alt="얼리버드" />
+              <img src="images/home/link3.jpg" alt="톡채널" />
             </a>
           </li>
         </ul>
@@ -107,8 +95,7 @@
   </div>
 
   <script type="text/javascript">
-    homeTopSlide();
-    homeBannersType1();
+    homeBanners();
   </script>
 </body>
 </html>

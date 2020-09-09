@@ -22,7 +22,7 @@ function alertPopup(opened, msg, link) {
         text = '신청 이력이 없습니다.';
         break;
       case '14up':
-        text = '14세 이상인 고객님만<br />참여할 수 있습니다.';
+        text = '이 이벤트는<br />14세 이상인 고객님만 참여할 수 있습니다.<br />14세 미만일 경우 당첨이 취소될 수 있습니다.';
         break;
       case 'already':
         text = '이미 참여하셨습니다.';
@@ -64,32 +64,76 @@ function popupClose (obj) {
   obj.closest('.popup').removeClass('opened')
 }
 
-function homeTopSlide () {
-  var $obj = $('.home__top-slide');
+function homeBanners () {
+  var $obj = $('.home__banners');
   if ($obj.length === 0) return false;
-  $obj.find('.slick-lists').slick({
-    infinite: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    dots: false
+  var owl = $obj.find('.owl-carousel');
+  owl.owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: false,
+    autoplayTimeout: 3000,
   });
 }
 
-function homeBannersType1 () {
-  var $obj = $('.home__banners-type1');
+function infoQa () {
+  var $obj = $('.info__qa');
   if ($obj.length === 0) return false;
-  $obj.find('.slick-lists').slick({
-    centerMode: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
+  var owl = $obj.find('.owl-carousel');
+  owl.owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: false,
+    autoplayTimeout: 3000,
+  });
+}
+
+function infoToon () {
+  var $obj = $('.info__toon');
+  if ($obj.length === 0) return false;
+  var $nav = $('.info__toon-nav');
+  var $owl = $obj.find('.owl-carousel');
+  var current = parseInt($obj.attr('data-current')) - 1;
+  $owl.owlCarousel({
+    items: 1,
+    loop: true,
+    autoplay: false,
+    autoplayTimeout: 3000,
+    dots: false,
+    onDragged: function (event) {
+      current = event.item.index - (event.item.count >= 5 ? 3 : 2);
+      if (current === event.item.count) {
+        current = 0
+      }
+      navAction();
+    }
+  });
+  var navAction = function () {
+    $obj.find('.button__arrow').attr('href', $obj.find('.owl-item.active .item').attr('data-link'));
+    $obj.find('.info__toon-title span em').text(parseInt(current) + 1)
+    $nav.find('li').eq(current).addClass('active').siblings().removeClass('active')
+  }
+  var itemAction = function () {
+    navAction();
+    $owl.trigger('to.owl.carousel', [current, 300]);
+  }
+  itemAction();
+  $nav.find('li').not('.disabled').off('click').on('click', function(e) {
+    current = $(this).index();
+    itemAction();
+  });
+}
+
+function infoToonPopup () {
+  var $obj = $('.popup-toon');
+  if ($obj.length === 0) return false;
+  var $owl = $obj.find('.owl-carousel');
+  $owl.owlCarousel({
+    items: 1,
+    loop: false,
+    autoplay: false,
+    autoplayTimeout: 3000,
     dots: true,
-    fade: true,
-    cssEase: 'linear',
-    autoplay: true,
-    autoplaySpeed: 3000
   });
 }
 
@@ -99,8 +143,8 @@ function goodsTopSlide () {
   var owl = $obj.find('.owl-carousel');
   owl.owlCarousel({
     items: 1,
-    loop: false,
-    autoplay: false,
+    loop: true,
+    autoplay: true,
     autoplayTimeout: 3000,
   });
   $('.top-slide-box.disabled a').off('click').on('click', function () {
