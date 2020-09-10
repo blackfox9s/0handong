@@ -1280,7 +1280,18 @@ body {
     }
 
     .popup__contents {
-      margin-top: rem(100);
+      min-height: 95vh;
+      margin: 0;
+      a {
+        position: absolute;
+        bottom: 0;
+        height: 12.1%;
+        right: 0;
+        width: 92.6%;
+        background: transparent;
+        z-index: 2;
+        font-size: 0;
+      }
     }
 
     .button__type5 {
