@@ -45,7 +45,7 @@ body {
     &:link,
     &:active,
     &:visited {
-      color: #000;
+      //color: #000;
     }
   }
   * {
@@ -318,17 +318,22 @@ body {
 .home {
   &__timer {
     line-height: 1;
-    margin: rem(10) rem(45) rem(33);
+    margin: rem(-2) rem(55) rem(31) rem(50);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #111;
 
     p {
-      font-family: $font600;
-      font-size: rem(30);
-      margin-bottom: rem(12);
+      font-family: $font500;
+      font-size: rem(34);
+      letter-spacing: -0.01em;
     }
 
     em {
       font-family: $font900;
       font-size: rem(84);
+      letter-spacing: -0.05em;
     }
   }
 
@@ -406,7 +411,7 @@ body {
 
   &__links {
     margin-top: rem(80);
-    padding: 0 rem(25);
+    padding: 0 rem(25) rem(100);
 
     ul {
       display: flex;
@@ -431,15 +436,16 @@ body {
 .info {
   &__top {
     position: relative;
+    padding-bottom: rem(80);
 
     a {
       display: block;
       position: absolute;
       background: transparent;
-      top: rem(239);
+      top: rem(231);
       left: rem(40);
       width: 32%;
-      height: rem(40);
+      height: rem(50);
       font-size: 0;
       z-index: 2;
     }
@@ -455,20 +461,20 @@ body {
 
   &__benefits {
     position: relative;
-    padding-bottom: rem(80);
+    padding-bottom: rem(230);
     background: #8feccc;
 
     a {
       display: block;
-      position: absolute;
-      background: transparent;
-      bottom: rem(230);
-      left: 50%;
-      width: 87%;
-      height: rem(120);
+      background: url('../images/info/benefits_btn.png') 50% 50% no-repeat;
+      background-size: contain;
+      width: 86.6%;
+      max-width: 650px;
+      height: rem(170);
+      margin: rem(-20) auto 0;
       font-size: 0;
+      position: relative;
       z-index: 2;
-      transform: translateX(-50%);
     }
   }
 
@@ -1280,15 +1286,22 @@ body {
     }
 
     .popup__contents {
-      min-height: 95vh;
+      max-height: 95vh;
       margin: 0;
+    }
+
+    .popup__buttons {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      margin: 0;
+      padding: 0;
+      width: 85.5%;
       a {
-        position: absolute;
-        bottom: 0;
-        height: 12.1%;
-        right: 0;
-        width: 92.6%;
-        background: transparent;
+        display: block;
+        height: rem(174);
+        background: url('../images/info/popup_kakao_btn.png') 50% 100% no-repeat;
+        background-size: contain;
         z-index: 2;
         font-size: 0;
       }
