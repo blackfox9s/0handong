@@ -56,11 +56,16 @@ function popupOpen(target, num) {
     if ($selectItem.attr('data-link')) {
       $obj.find('.button__type5').attr('href', $selectItem.attr('data-link'))
     }
+  } else if (target === 'info') {
+    $('.popup-info .owl-carousel').trigger('to.owl.carousel', 0).trigger('play.owl.autoplay', 4000)
   }
   $obj.addClass('opened')
 }
 
 function popupClose (obj) {
+  if (obj.closest('.popup').hasClass('popup-info')) {
+    $('.popup-info .owl-carousel').trigger('stop.owl.autoplay')
+  }
   obj.closest('.popup').removeClass('opened')
 }
 
@@ -83,7 +88,7 @@ function infoQa () {
   owl.owlCarousel({
     items: 1,
     loop: true,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 3000,
   });
 }
@@ -130,7 +135,7 @@ function infoPopup () {
   var $owl = $obj.find('.owl-carousel');
   $owl.owlCarousel({
     items: 1,
-    loop: false,
+    loop: true,
     autoplay: false,
     autoplayTimeout: 3000,
     dots: true,
