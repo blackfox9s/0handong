@@ -104,23 +104,14 @@ function infoToon () {
     loop: true,
     autoplay: false,
     autoplayTimeout: 3000,
-    dots: false,
-    onDragged: function (event) {
-      current = event.item.index - (event.item.count >= 5 ? 3 : 2);
-      if (current === event.item.count) {
-        current = 0
-      }
-      navAction();
-    }
+    dots: false
   });
-  var navAction = function () {
+  var itemAction = function () {
+    $owl.trigger('to.owl.carousel', 0)
+    $('.info__toon-list').addClass('unActive').filter('[data-index="'+ (current + 1) +'"]').removeClass('unActive');
     $obj.find('.button__arrow').attr('href', $obj.find('.owl-item.active .item').attr('data-link'));
     $obj.find('.info__toon-title span em').text(parseInt(current) + 1)
-    $nav.find('li').eq(current).addClass('active').siblings().removeClass('active')
-  }
-  var itemAction = function () {
-    navAction();
-    $owl.trigger('to.owl.carousel', [current, 300]);
+    $nav.find('li').eq(current).addClass('active').siblings().removeClass('active');
   }
   itemAction();
   $nav.find('li').not('.disabled').off('click').on('click', function(e) {
