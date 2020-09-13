@@ -7,22 +7,25 @@ function alertPopup(opened, msg, link) {
         text = '준비 중입니다.';
         break;
       case 'privacy':
-        text = '본 이벤트는 개인정보 수집·이용 및 취급위탁에 대한 동의를 완료한 고객만<br />참여하실 수 있습니다.';
+        text = '개인정보 수집·이용 및<br />' +
+            '취급위탁에 대한 <span><em>동의 완료</em></span>한<br />' +
+            '고객만 참여하실 수 있습니다';
         break;
       case 'loginAfter':
-        text = '0한동 로그인이 필요합니다.';
+        text = '<span><em>0한동 로그인</em></span>이<br />' +
+            '필요합니다.';
         break;
       case 'complete':
-        text = '신청이 완료되었습니다';
+        text = '<span><em>신청이 완료</em></span>되었습니다';
         break;
       case 'noOpen':
-        text = '오픈 준비 중입니다.';
+        text = '<span><em>오픈 준비 중</em></span>입니다.';
         break;
       case 'noData':
         text = '신청 이력이 없습니다.';
         break;
       case '14up':
-        text = '이 이벤트는<br />14세 이상인 고객님만 참여할 수 있습니다.<br />14세 미만일 경우 당첨이 취소될 수 있습니다.';
+        text = '<span><em>14세 이상</em></span> 고객님만<br /> 참여할 수 있습니다.';
         break;
       case 'already':
         text = '이미 참여하셨습니다.';
@@ -53,9 +56,6 @@ function popupOpen(target, num) {
     var $selectItem = $item.filter('[data-goods="'+ num +'"]')
     $item.hide();
     $selectItem.show();
-    if ($selectItem.attr('data-link')) {
-      $obj.find('.button__type5').attr('href', $selectItem.attr('data-link'))
-    }
   } else if (target === 'info') {
     $('.popup-info .owl-carousel').trigger('to.owl.carousel', 0).trigger('play.owl.autoplay', 4000)
   }
@@ -79,6 +79,15 @@ function homeBanners () {
     autoplay: false,
     autoplayTimeout: 3000,
   });
+}
+
+function homeDDays () {
+  var $obj = $('.home__timer');
+  if ($obj.length === 0) {return false;}
+  var today = moment();
+  var endDate = moment($obj.find('em').attr('data-endDate'));
+  var diff = endDate.diff(today, 'days') + 1;
+  $obj.find('em').text('D-' + numPad(diff < 0 ? 0 : diff , 3))
 }
 
 function infoQa () {
@@ -140,58 +149,21 @@ function goodsTopSlide () {
   owl.owlCarousel({
     items: 1,
     loop: true,
-    autoplay: true,
+    autoplay: false,
     autoplayTimeout: 3000,
   });
-  $('.top-slide-box.disabled a').off('click').on('click', function () {
-    owl.trigger('stop.owl.autoplay')
-    alertPopup(true, 'noOpen');
+  $obj.find('.item .button__plus').off('click').on('click', function () {
+    owl.trigger('stop.owl.autoplay');
+    if ($(this).closest('.item').hasClass('disabled')) {
+      alertPopup(true, 'noOpen');
+    } else {
+      popupOpen('goods', $(this).attr('data-index'))
+    }
     return false;
   });
 }
 
-function eventToggle () {
-  var $obj = $('.event__main-lists');
-  var current = 0;
-  $obj.find('li').each(function(i){
-    if (i === 0) {
-      $obj.append('<div class="dots"></div>')
-    }
-    $obj.find('.dots').append('<button type="button">'+ (i + 1) +'</button>');
-    if ($(this).hasClass('end')) {
-      $obj.find('.dots').find('button').eq(i).addClass('end');
-    }
-  });
-  var action = function(num) {
-    if (num) current = num;
-    $obj.find('li').eq(num).addClass('active').siblings().removeClass('active');
-    $obj.find('.dots button').eq(num).addClass('active').siblings().removeClass('active');
-  }
-  action(0);
-  $obj.find('li, .dots button').off('click').on('click', function () {
-    if ($(this).hasClass('end')) {
-      alertPopup(true, '종료된 이벤트입니다.');
-    } else {
-      action($(this).index());
-    }
-  });
-}
-
-function inputChecked () {
-  var $obj = $('.popup-form .popup-form__inputs');
-  if ($obj.find('[data-alert="time"]').length === 1) {
-    var $item = $obj.find('[data-alert="time"]')
-    if ($item.find('select option:selected').val() == 0) {
-      alertPopup(true, '희망 시간을 선택해주세요.');
-      return false;
-    }
-  }
-  if ($obj.find('[data-alert="goods"]').length === 1) {
-    var $item = $obj.find('[data-alert="goods"]')
-    if ($item.find('select option:selected').val() == 0) {
-      alertPopup(true, '희망 굿즈를 선택해주세요.');
-      return false;
-    }
-  }
-  return true;
+function numPad(n, width) {
+  n = n + '';
+  return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
 }

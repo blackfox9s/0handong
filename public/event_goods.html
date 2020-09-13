@@ -27,22 +27,24 @@
     <section class="camping__content">
       <!-- 캠핑 이벤트 상단(s) -->
       <article class="event__top">
-        <img src="images/event/top_goods.png" alt="사죠영 굿즈 얼리버드 이벤트" />
+        <img src="images/event/event2_top.png" alt="신청해죠영 먼저죠영" />
       </article>
       <!-- 캠핑 이벤트 상단(e) -->
 
       <!-- 캠핑 이벤트 상세[s) -->
       <article class="event__info">
         <div class="event__info-agree">
-          <ul class="event__popup-buttons">
+          <ul class="event__popup-buttons round">
             <li>
-              <button type="button" class="button__type2" onclick="popupOpen('goods', 1)">
-                자이언트 빈백
+              <img src="images/event/event2_product1.png" alt="자이언트 쿠션" />
+              <button type="button" class="button__plus" onclick="popupOpen('goods', 1)">
+                자세히 보기
               </button>
             </li>
             <li>
-              <button type="button" class="button__type2" onclick="popupOpen('goods', 2)">
-                크루저보드
+              <img src="images/event/event2_product2.png" alt="크루저 보드" />
+              <button type="button" class="button__plus" onclick="popupOpen('goods', 2)">
+                자세히 보기
               </button>
             </li>
           </ul>
@@ -50,22 +52,29 @@
             <label>
               <!-- 신청 완료 시 : checked disabled 추가 -->
               <input type="checkbox" />
-              <span>개인정보 수집･이용 및 취급위탁 내용을 확인하고 동의합니다.</span>
+              <span>
+                개인정보 수집･이용 및 취급위탁 내용을<br />확인하고 동의합니다.
+                <a href="javascript:popupOpen('privacy')">전문보기</a>
+              </span>
             </label>
-            <a href="javascript:popupOpen('privacy')">전문보기</a>
           </div>
         </div>
         <div class="event__info-buttons">
-          <button type="button" class="button__type1" onclick="popupOpen('form')">
-            이벤트 신청하기
+          <button type="button" class="button__image type1" onclick="applyPopupOpen()">
+            <img src="images/event/btn_form.png" alt="이벤트 신청해영" />
           </button>
           <!--
-          <button type="button" class="button__type1" onclick="popupOpen('my')">
-            나의 신청보기
+          <button type="button" class="button__image type2" onclick="popupOpen('my')">
+            <img src="images/event/btn_my.png" alt="신청현황 확인해영" />
           </button>
           -->
         </div>
-        <dl class="common__notice">
+      </article>
+      <!-- 캠핑 이벤트 상세(e) -->
+
+      <!-- 캠핑 이벤트 유의사항[s) -->
+      <article class="common__notice">
+        <dl>
           <dt>유의사항</dt>
           <dd>이 이벤트는 모바일로만 참여 가능합니다.</dd>
           <dd>인증에 필요한 개인 정보 미입력 시 응모가 불가능 합니다.</dd>
@@ -82,7 +91,7 @@
           <dd>경품은 양도 및 양수가 되지 않으며, 타상품으로 교환 및 환불이 불가능 합니다.</dd>
         </dl>
       </article>
-      <!-- 캠핑 이벤트 상세(e) -->
+      <!-- 캠핑 이벤트 유의사항(e) -->
     </section>
   </div>
 
@@ -94,7 +103,7 @@
         메세지를 입력해주세요.
       </p>
       <div class="popup-alert__button">
-        <button type="button" class="button__type5">확인</button>
+        <button type="button" class="button__confirm">확인</button>
       </div>
     </div>
   </article>
@@ -154,8 +163,8 @@
         </ul>
       </section>
       <div class="popup__buttons">
-        <button type="button" class="button__type5" onclick="popupClose($(this))">
-          확인
+        <button class="button__image-pop type1" onclick="popupClose($(this))">
+          <span>확인해영</span>
         </button>
       </div>
     </div>
@@ -168,10 +177,12 @@
       <span class="button__close" onclick="popupClose($(this))">close</span>
       <section class="popup__contents">
         <p class="popup__title">
-          개인정보 수집·이용 및<br />취급위탁 내용을 확인하고 동의
+          개인정보 수집·이용 및<br />
+          취급위탁 내용 확인 및 동의
         </p>
         <p class="text1">
-          이벤트 참여와 관련하여, 본인의 개인정보를<br />SK텔레콤 주식회사가 수집 및 이용하는 것에 동의합니다.
+          이벤트 참여와 관련하여, 본인의 개인정보를<br />
+          SK텔레콤 주식회사가 수집 및 이용하는 것에 동의합니다.
         </p>
         <table>
           <colgroup>
@@ -243,8 +254,8 @@
         </ul>
       </section>
       <div class="popup__buttons">
-        <button type="button" class="button__type5" onclick="popupClose($(this))">
-          확인
+        <button class="button__image-pop type1" onclick="popupClose($(this))">
+          <span>확인해영</span>
         </button>
       </div>
     </div>
@@ -271,15 +282,15 @@
             <em>인스타아이디</em>
           </li>
         </ul>
-        <p class="popup-my__text">당첨 고객께는 0월 00일까지 개별 안내됩니다.</p>
+        <p class="popup-my__text">당첨고객에게 개별적으로 안내됩니다.</p>
       </section>
       <div class="popup__buttons">
-        <button type="button" class="button__type5" onclick="popupClose($(this));">
-          확인
+        <button class="button__image-pop type1" onclick="popupClose($(this))">
+          <span>확인해영</span>
         </button>
         <!--
-        <button type="button" class="button__type5" onclick="popupClose($(this)); popupOpen('form');">
-          수정
+        <button class="button__image-pop type3" onclick="popupClose($(this))">
+          <span>수정해영</span>
         </button>
         -->
       </div>
@@ -292,11 +303,10 @@
     <div class="popup__box">
       <span class="button__close" onclick="popupClose($(this))">close</span>
       <section class="popup__contents">
-        <p class="popup__title">(이벤트 타이틀) 신청하기</p>
-        <p class="text1">이벤트 소개 카피 2~3줄 삽입<br />이벤트 참여와 관련하여 이용하는 것에 동의합니다.</p>
+        <p class="popup__title">이벤트 신청하기</p>
         <ul class="popup-form__inputs">
           <li data-alert="goods">
-            <span class="label">필수사항</span>
+            <span class="label">* 필수</span>
             <select>
               <option value="0" disabled selected>희망 굿즈를 선택하세요</option>
               <option value="1">사죠영 자이언트 빈백</option>
@@ -304,19 +314,18 @@
             </select>
           </li>
           <li>
-            <span class="label">선택사항</span>
             <input type="text" placeholder="인스타그램 아이디를 입력하세요" />
           </li>
         </ul>
         <dl>
           <dt>유의사항</dt>
-          <dd>T다이렉트샵 카카오톡채널에서 사죠영 얼리버드를 등록한 고객 대상으로 추첨합니다.</dd>
-          <dd>당첨 고객께는 0월 00일까지 개별 안내됩니다.</dd>
+          <dd>T다이렉트샵 카카오톡채널에서 사죠영</dd>
+          <dd>얼리버드를 등록한 고객 대상으로 추첨합니다</dd>
         </dl>
       </section>
       <div class="popup__buttons">
-        <button type="button" class="button__type5" onclick="apply()" disabled>
-          확인
+        <button class="button__image-pop type4" onclick="apply()" disabled>
+          <span>신청해영</span>
         </button>
       </div>
     </div>
@@ -334,11 +343,11 @@
     <a href="javascript:alertPopup(true, 'ready');">준비 중</a>
     <a href="javascript:alertPopup(true, 'privacy');">개인정보</a>
     <a href="javascript:alertPopup(true, 'loginAfter');">로그인 안내</a>
-    <a href="javascript:alertPopup(true, 'noData');">신청 정보가 없음</a>
-    <a href="javascript:alertPopup(true, '사죠영 굿즈 얼리버드<br />이벤트 참여기간이 종료되었습니다.');">사죠영 굿즈 얼리버드 이벤트 종료</a>
     <a href="javascript:alertPopup(true, '14up');">14세</a>
     <a href="javascript:alertPopup(true, 'complete');">이벤트 신청완료</a>
+    <a href="javascript:alertPopup(true, 'noData');">신청 정보가 없음</a>
     <!--
+    <a href="javascript:alertPopup(true, '<span><em>사죠영 굿즈 얼리버드</em></span><br />이벤트 참여기간이 종료되었습니다.');">캠핑인더시티 이벤트 종료</a>
     <a href="javascript:alertPopup(true, 'already');">이미참여</a>
     -->
   </div>
@@ -354,6 +363,13 @@
         $('.popup-form .popup__buttons button').attr('disabled', false)
       }
     });
+    function applyPopupOpen () {
+      if ($('.event__info-agree input:checkbox').is(':checked')) {
+        popupOpen('form');
+      } else {
+        alertPopup(true, 'privacy');
+      }
+    }
     function apply () {
       popupClose($('.popup-form'));
       alertPopup(true, 'complete');

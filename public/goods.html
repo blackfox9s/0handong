@@ -39,58 +39,58 @@
         <section class="camping__content">
           <!-- 캠핑 굿즈 상단(s) -->
           <article class="goods__top-slide">
-            <div class="common__title">
-              <span>0들의 사과폰은 더 특별해야 하니까-</span>
-              <p>사죠영 리미티드 에디-숀</p>
-            </div>
+            <p class="goods__top-slide-title">
+              <img src="images/goods/top_slide_title.png" alt="얼리버드를 위한 리미티드 에디-숀 사죠영 한정판 굿즈" />
+            </p>
             <div class="owl-carousel">
-              <div class="item">
-                <div class="top-slide-box">
-                  <img src="images/goods/slide_product1.jpg" alt="에너지충전세트" />
-                  <a href="javascript:popupOpen('goods', 1)">자세히보기</a>
+              <div class="item disabled">
+                <div class="shadow-box">
+                  <img src="images/goods/slide_product1.jpg" alt="사죠영 한정판 굿즈 ① 달려죠영 보드" />
                 </div>
+                <button class="button__plus" data-index="1">자세히보기</button>
+              </div>
+              <div class="item disabled">
+                <div class="shadow-box">
+                  <img src="images/goods/slide_product2.jpg" alt="사죠영 한정판 굿즈 ② 기대죠영 쿠션" />
+                </div>
+                <button class="button__plus" data-index="2">자세히보기</button>
               </div>
               <div class="item">
-                <div class="top-slide-box">
-                  <img src="images/goods/slide_product2.jpg" alt="나만의 폰꾸 세트" />
-                  <a href="javascript:popupOpen('goods', 2)">자세히보기</a>
+                <div class="shadow-box">
+                  <img src="images/goods/slide_product3.jpg" alt="사죠영 기프트 ① 충전해죠영 SET" />
                 </div>
+                <button class="button__plus" data-index="3">자세히보기</button>
               </div>
               <div class="item">
-                <div class="top-slide-box disabled">
-                  <img src="images/goods/slide_product3.jpg" alt="자이언트 빈백" />
-                  <a href="javascript:popupOpen('goods', 3)">자세히보기</a>
+                <div class="shadow-box">
+                  <img src="images/goods/slide_product4.jpg" alt="사죠영 기프트 ② 함께해죠영 SET" />
                 </div>
-              </div>
-              <div class="item">
-                <div class="top-slide-box disabled">
-                  <img src="images/goods/slide_product4.jpg" alt="크루저보드" />
-                  <a href="javascript:popupOpen('goods', 4)">자세히보기</a>
-                </div>
+                <button class="button__plus" data-index="4">자세히보기</button>
               </div>
             </div>
           </article>
           <!-- 캠핑 굿즈 상단(e) -->
+
           <!-- 캠핑 굿즈 배너(s) -->
           <article class="goods__banner">
-            <div class="common__title">
-              <span>귀여우면 다야. 귀여우면 다지.</span>
-              <p>굿즈 이렇게 가져죠영!</p>
-            </div>
+            <p class="goods__banner-title">
+              <img src="images/goods/banner_title.png" alt="얼리버드 신청하고 아이폰을 구매할때! 사죠영 굿즈 이렇게 받아영" />
+              <a href="javascript:popupOpen('policy');">신청방법보기</a>
+            </p>
             <ul>
               <li>
-                <a href="goods_early.html">
-                  <img src="images/goods/text_banner1.jpg" alt="얼리버드 신청하면 GET !" />
+                <a href="info.html#benefits" class="cha-type1">
+                  <img src="images/goods/banner1.png" alt="얼리버드 신청하러 가영" />
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <img src="images/goods/text_banner2.jpg" alt="남들보다 빠르게 한정판 GET !" />
+                <a href="#" class="cha-type2">
+                  <img src="images/goods/banner2.png" alt="아이폰12 구매하러 가영" />
                 </a>
               </li>
-              <li>
-                <a href="javascript:popupOpen('tips');">
-                  <img src="images/goods/text_banner3.jpg" alt="사죠영 굿즈를 GET하는 꿀팁 확인" />
+              <li class="disabled">
+                <a href="#" class="cha-type2">
+                  <img src="images/goods/banner3.png" alt="아이폰12 사전예약 바로 가영" />
                 </a>
               </li>
             </ul>
@@ -107,7 +107,7 @@
             메세지를 입력해주세요.
           </p>
           <div class="popup-alert__button">
-            <button type="button" class="button__type5">확인</button>
+            <button type="button" class="button__confirm">확인</button>
           </div>
         </div>
       </article>
@@ -119,11 +119,6 @@
           <span class="button__close" onclick="popupClose($(this))">close</span>
           <section class="popup__contents">
             <ul class="popup-goods__list">
-              <!--
-              팝업 오픈 시, 번호에 따라 분기 처리.
-              얼리버드 신청 링크가 다를 때, data-link : 얼리버드 신청하러 가기 링크
-              얼리버드 신청 링크가 같을 때, 하단에 버튼에 링크
-              -->
               <li data-goods="1">
                 goods1
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -134,7 +129,7 @@
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
               </li>
-              <li data-goods="2" data-link="http://daum.net">
+              <li data-goods="2">
                 goods2
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -144,7 +139,7 @@
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
               </li>
-              <li data-goods="3" data-link="http://naver.com">
+              <li data-goods="3">
                 goods3
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -154,7 +149,27 @@
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
               </li>
-              <li data-goods="4" data-link="http://daum.net">
+              <li data-goods="4">
+                goods4
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+              </li>
+              <li data-goods="5">
+                goods3
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+              </li>
+              <li data-goods="6">
                 goods4
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
@@ -167,15 +182,15 @@
             </ul>
           </section>
           <div class="popup__buttons">
-            <a href="goods_early.html" class="button__type5">
-              얼리버드 신청하러 가기
-            </a>
+            <button class="button__image-pop type1" onclick="popupClose($(this)); popupOpen('policy');">
+              신청방법 <span>확인해영</span>
+            </button>
           </div>
         </div>
       </article>
       <!-- 굿즈 소개 이미지 팝업(s) -->
 
-      <!-- 굿즈 정책 소개 팝업(s) -->
+      <!-- 굿즈 신청방법(정책) 팝업(s) -->
       <article class="popup popup-image popup-policy">
         <div class="popup__box">
           <span class="button__close" onclick="popupClose($(this))">close</span>
@@ -190,42 +205,18 @@
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
           </section>
           <div class="popup__buttons">
-            <button type="button" class="button__type5" onclick="popupClose($(this))">
-              확인
-            </button>
+            <a href="#" class="button__image-pop type2">
+              아이폰 <span>구매하러 가영</span>
+            </a>
           </div>
         </div>
       </article>
-      <!-- 굿즈 정책 소개 팝업(s) -->
-
-      <!-- 굿즈 get 꿀팁 팝업(s) -->
-      <article class="popup popup-image popup-tips">
-        <div class="popup__box">
-          <span class="button__close" onclick="popupClose($(this))">close</span>
-          <section class="popup__contents">
-            굿즈 get 꿀팁 내용
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-          </section>
-          <div class="popup__buttons">
-            <button type="button" class="button__type5" onclick="popupClose($(this))">
-              확인
-            </button>
-          </div>
-        </div>
-      </article>
-      <!-- 굿즈 get 꿀팁 팝업(s) -->
+      <!-- 굿즈 신청방법(정책) 팝업(s) -->
 
       <!-- alert 팝업 실행 :: 개발 시 삭제 -->
       <div class="sr-links">
         <a href="javascript:popupOpen('goods', 1)">굿즈 소개</a>
         <a href="javascript:popupOpen('policy')">굿즈 정책 소개</a>
-        <a href="javascript:popupOpen('tips')">get 꿀팁</a>
         <a href="javascript:alertPopup(true, 'noOpen')">오픈 준비 중</a>
       </div>
 
