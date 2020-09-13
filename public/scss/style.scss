@@ -1357,6 +1357,10 @@ body {
   }
 
   &-info {
+    .popup__box {
+      border: none;
+    }
+
     .popup__contents {
       margin: 0;
       max-height: 95vh;
