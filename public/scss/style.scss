@@ -822,7 +822,6 @@ body {
         width: 100%;
         top: 0;
         background: #5bff81;
-        opacity: 0.8;
         z-index: 2;
       }
       &::after {
@@ -929,7 +928,6 @@ body {
             top: 0;
             right: 0;
             background: #5bff81;
-            opacity: 0.8;
             border-radius: rem(75) 0 0 rem(75);
             z-index: 2;
           }
