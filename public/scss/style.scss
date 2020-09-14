@@ -417,12 +417,15 @@ body {
       font-family: $font500;
       font-size: rem(34);
       letter-spacing: -0.01em;
+      white-space: nowrap;
+      word-break: keep-all;
     }
 
     em {
       font-family: $font900;
       font-size: rem(84);
       letter-spacing: -0.05em;
+      white-space: nowrap;
     }
   }
 
@@ -441,9 +444,9 @@ body {
     margin: rem(40) 0 0;
 
     .item {
+      position: relative;
       display: inline-block;
       padding: 0 rem(40) 0 rem(15);
-      position: relative;
 
       * {
         outline: none;
@@ -456,6 +459,10 @@ body {
           box-shadow: 0 0 rem(20) 0 rgba(0, 0, 0, 0.25);
           border-radius: rem(40);
           overflow: hidden;
+          -webkit-backface-visibility : hidden;
+          -moz-backface-visibility : hidden;
+          -webkit-transform : translate3d(0, 0, 0);
+          -moz-transform : translate3d(0, 0, 0);
         }
       }
 
@@ -469,10 +476,6 @@ body {
 
     .active .item {
       padding: 0 rem(15) 0 rem(40);
-    }
-
-    .active + .active .item {
-      padding: 0 rem(40) 0 rem(15);
     }
 
     .owl-carousel {
@@ -531,10 +534,10 @@ body {
       display: block;
       position: absolute;
       background: transparent;
-      top: rem(231);
-      left: rem(40);
+      top: 48.3%;
+      left: 5.6%;
       width: 32%;
-      height: rem(50);
+      height: 11%;
       font-size: 0;
       z-index: 2;
     }
@@ -578,7 +581,7 @@ body {
       span {
         position: absolute;
         left: 6.6%;
-        bottom: 5.5%;
+        bottom: 5.9%;
         width: 13%;
         height: 16%;
         display: flex;
@@ -674,6 +677,10 @@ body {
         overflow: hidden;
         border-radius: rem(30);
         box-shadow: 0 0 rem(20) 0 rgba(0, 0, 0, 0.25);
+        -webkit-backface-visibility : hidden;
+        -moz-backface-visibility : hidden;
+        -webkit-transform : translate3d(0, 0, 0);
+        -moz-transform : translate3d(0, 0, 0);
       }
     }
 
@@ -686,10 +693,6 @@ body {
       .button__arrow {
         opacity: 1;
       }
-    }
-
-    .active + .active .item {
-      padding: 0 rem(50) 0 rem(10);
     }
 
     .owl-carousel {
@@ -1060,6 +1063,10 @@ body {
     border-radius: rem(40);
     overflow: hidden;
     border: rem(8) solid #90eba5;
+    -webkit-backface-visibility : hidden;
+    -moz-backface-visibility : hidden;
+    -webkit-transform : translate3d(0, 0, 0);
+    -moz-transform : translate3d(0, 0, 0);
 
     .button__close {
       position: absolute;
@@ -1432,8 +1439,8 @@ body {
 
     .popup__buttons {
       position: absolute;
-      right: 0;
-      bottom: 0;
+      right: rem(-2);
+      bottom: rem(-1);
       margin: 0;
       padding: 0;
       width: 85.5%;

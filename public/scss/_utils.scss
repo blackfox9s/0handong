@@ -36,16 +36,16 @@ $font900: 's-core-dream-black';
 }
 
 @mixin size640 {
-  @media (max-width: 640px) { @content; }
+  @media only screen and (max-width: 640px) { @content; }
 }
 @mixin size540 {
-  @media (max-width: 540px) { @content; }
+  @media only screen and (max-width: 540px) { @content; }
 }
 @mixin size480 {
-  @media (max-width: 480px) { @content; }
+  @media only screen and (max-width: 480px) { @content; }
 }
 @mixin size360 {
-  @media (max-width: 360px) { @content; }
+  @media only screen and (max-width: 360px) { @content; }
 }
 
 @mixin transition {

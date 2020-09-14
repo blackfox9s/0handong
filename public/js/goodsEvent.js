@@ -116,7 +116,6 @@ function infoToon () {
     dots: false
   });
   var itemAction = function () {
-    $owl.trigger('to.owl.carousel', 0)
     $('.info__toon-list').addClass('unActive').filter('[data-index="'+ (current + 1) +'"]').removeClass('unActive');
     $obj.find('.button__arrow').attr('href', $obj.find('.owl-item.active .item').attr('data-link'));
     $obj.find('.info__toon-title span em').text(parseInt(current) + 1)
@@ -167,3 +166,13 @@ function numPad(n, width) {
   n = n + '';
   return n.length >= width ? n : new Array(width - n.length + 1).join('0') + n;
 }
+
+function fontResize(){
+  var resolution=750, font=24;
+  var width = $('html').outerWidth(true, true);
+  var fontSize = font * (width/resolution);
+  $('html').css('font-size', fontSize > font ? font : fontSize);
+}
+
+fontResize();
+$(window).resize(fontResize);
