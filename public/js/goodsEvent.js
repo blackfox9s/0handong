@@ -110,11 +110,18 @@ function infoToon () {
   var current = parseInt($obj.attr('data-current')) - 1;
   $owl.owlCarousel({
     items: 1,
-    loop: true,
+    loop: false,
     autoplay: false,
     autoplayTimeout: 3000,
     dots: false
   });
+  $owl.on('changed.owl.carousel', function(event) {
+    if (event.item.index + 1 === event.item.count) {
+      $owl.parents('.info__toon-list').addClass('last');
+    } else {
+      $owl.parents('.info__toon-list').removeClass('last');
+    }
+  })
   var itemAction = function () {
     $('.info__toon-list').addClass('unActive').filter('[data-index="'+ (current + 1) +'"]').removeClass('unActive');
     $obj.find('.button__arrow').attr('href', $obj.find('.owl-item.active .item').attr('data-link'));

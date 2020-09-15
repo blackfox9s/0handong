@@ -608,6 +608,22 @@ body {
         bottom: rem(-40);
         z-index: 10;
       }
+
+      &::before {
+        content: '';
+        background: #90eba5;
+        position: absolute;
+        left: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        border-radius: rem(30);
+        box-shadow: 0 0 rem(20) 0 rgba(0, 0, 0, 0.25);
+      }
+
+      &.last::before {
+        left: rem(550);
+      }
     }
 
     &-nav {
