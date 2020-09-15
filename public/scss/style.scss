@@ -61,6 +61,18 @@ body {
     min-height: 100vh;
     overflow: hidden;
     background: #60e1b5;
+    position: relative;
+  }
+  &__footer {
+    padding-bottom: rem(50);
+    margin-top: rem(-43);
+  }
+  &__floating {
+    position: fixed;
+    width: rem(268);
+    right: 0;
+    bottom: rem(25);
+    z-index: 20;
   }
 }
 
@@ -1066,7 +1078,7 @@ body {
 
   &.opened {
     opacity: 1;
-    z-index: 10;
+    z-index: 100;
   }
 
   &__box {
