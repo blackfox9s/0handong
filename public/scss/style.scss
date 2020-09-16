@@ -99,7 +99,7 @@ body {
     height: rem(41);
     background: url('../images/icon_back.png') 50% 50% no-repeat;
     background-size: contain;
-    font-size: 0;
+    font-size: 0 !important;
   }
 
   &__plus {
