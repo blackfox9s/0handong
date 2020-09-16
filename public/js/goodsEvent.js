@@ -195,11 +195,13 @@ function dateCheck () {
         $this.removeClass('disabled');
       }
     }
-    $this.off('click').on('click', function () {
-      if (today < startDay) {
-        alertPopup(true, 'ready');
-        return false;
-      }
-    });
+    if ($this[0].tagName === 'A') {
+      $this.off('click').on('click', function () {
+        if (today < startDay) {
+          alertPopup(true, 'ready');
+          return false;
+        }
+      });
+    }
   });
 }
