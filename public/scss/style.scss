@@ -657,6 +657,15 @@ body {
       li {
         flex: 1 0 0;
         padding: 0 rem(11);
+
+        &.disabled span {
+          background: url('../images/info/nav_comming.png') 50% 50% no-repeat;
+          background-size: contain;
+          padding-top: 100%;
+          i, img {
+            display: none;
+          }
+        }
       }
 
       span {
@@ -664,6 +673,8 @@ body {
         display: block;
         border-radius: rem(20);
         overflow: hidden;
+        padding-top: 0;
+
         &::before {
           content: '';
           border-radius: rem(20);
@@ -1009,6 +1020,7 @@ body {
       position: absolute;
       top: rem(80);
       left: rem(51);
+      width: rem(371);
 
       em {
         display: block;

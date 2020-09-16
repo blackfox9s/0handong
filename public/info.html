@@ -10,6 +10,7 @@
   <link rel='stylesheet' type='text/css' href='css/owl.carousel.min.css'/>
   <link rel='stylesheet' type='text/css' href='css/style.css'/>
   <script type="text/javascript" src='js/jquery.min.js'></script>
+  <script type="text/javascript" src='js/moment.min.js'></script>
   <script type="text/javascript" src='js/owl.carousel.min.js'></script>
   <script type="text/javascript" src='js/goodsEvent.js'></script>
 </head>
@@ -234,16 +235,27 @@
             </div>
             <div class="info__toon-nav">
               <ul>
-                <li><span><i>01</i><img src="images/info/nav1.png" /></span></li>
-                <!--<li><span><i>02</i><img src="images/info/nav2.png" /></span></li>-->
-                <!--<li><span><i>03</i><img src="images/info/nav3.png" /></span></li>-->
-                <!--<li><span><i>번외</i><img src="images/info/nav4.png" /></span></li>-->
-                <li class="disabled"><span><img src="images/info/nav_comming.png" alt="커밍순" /></span></li>
-                <li class="disabled"><span><img src="images/info/nav_comming.png" alt="커밍순" /></span></li>
-                <li class="disabled"><span><img src="images/info/nav_comming.png" alt="커밍순" /></span></li>
-                <li class="disabled"><span><img src="images/info/nav_comming.png" alt="커밍순" /></span></li>
-                <li class="disabled"><span><img src="images/info/nav_comming.png" alt="커밍순" /></span></li>
-                <li class="disabled"><span><img src="images/info/nav_comming.png" alt="커밍순" /></span></li>
+                <li data-startDate="2020-09-16 15:00" class="disabled" >
+                  <span><i>01</i><img src="images/info/nav1.png" /></span>
+                </li>
+                <li data-startDate="2020-09-23 15:00" class="disabled">
+                  <span><i>02</i><img src="images/info/nav2.png" /></span>
+                </li>
+                <li data-startDate="2020-09-24 15:00" class="disabled">
+                  <span><i>03</i><img src="images/info/nav3.png" /></span>
+                </li>
+                <li data-startDate="2020-09-28 15:00" class="disabled">
+                  <span><i>번외</i><img src="images/info/nav4.png" /></span>
+                </li>
+                <li data-startDate="2020-10-31 15:00" class="disabled">
+                  <span><i>04</i><img src="images/info/nav5.png" /></span>
+                </li>
+                <li data-startDate="2020-10-31 15:00" class="disabled">
+                  <span><i>05</i><img src="images/info/nav6.png" /></span>
+                </li>
+                <li data-startDate="2020-10-31 15:00" class="disabled">
+                  <span><i>06</i><img src="images/info/nav7.png" /></span>
+                </li>
               </ul>
             </div>
           </article>
@@ -319,7 +331,7 @@
             <img src="images/info/popup_kakao.png" alt="" />
           </section>
           <div class="popup__buttons">
-            <a href="javascript:appMv.JSopenExternal('https://bit.ly/2ZBds2V');">T다이렉트샵 카톡채널 바로가영</a>
+            <a data-startDate="2020-09-24 15:00" href="javascript:appMv.JSopenExternal('https://bit.ly/2ZBds2V');">T다이렉트샵 카톡채널 바로가영</a>
           </div>
         </div>
       </article>
@@ -401,6 +413,7 @@
         infoQa();
         infoToon();
         infoPopup();
+        dateCheck();
       </script>
     </section>
     <!-- content END -->

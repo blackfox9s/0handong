@@ -4,7 +4,7 @@ function alertPopup(opened, msg, link) {
     var text = '';
     switch (msg) {
       case 'ready':
-        text = '준비 중입니다.';
+        text = '<span><em>준비 중</em></span>입니다.';
         break;
       case 'privacy':
         text = '개인정보 수집·이용 및<br />' +
@@ -182,3 +182,24 @@ function fontResize(){
 
 fontResize();
 $(window).resize(fontResize);
+
+function dateCheck () {
+  var $obj = $('[data-startDate]');
+  $obj.each(function () {
+    var $this = $(this)
+    var date = $(this).attr('data-startDate')
+    var today = moment()
+    var startDay = moment(date)
+    if ($this.hasClass('disabled')) {
+      if (today > startDay) {
+        $this.removeClass('disabled');
+      }
+    }
+    $this.off('click').on('click', function () {
+      if (today < startDay) {
+        alertPopup(true, 'ready');
+        return false;
+      }
+    });
+  });
+}
