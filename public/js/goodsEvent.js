@@ -125,7 +125,6 @@ function infoToon () {
   var itemAction = function () {
     $('.info__toon-list').addClass('unActive').filter('[data-index="'+ (current + 1) +'"]').removeClass('unActive');
     $obj.find('.button__arrow').attr('href', $obj.find('.owl-item.active .item').attr('data-link'));
-    $obj.find('.info__toon-title span em').text(parseInt(current) + 1)
     $nav.find('li').eq(current).addClass('active').siblings().removeClass('active');
   }
   itemAction();
