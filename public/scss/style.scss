@@ -66,6 +66,12 @@ body {
   &__footer {
     padding-bottom: rem(50);
     margin-top: rem(-43);
+    .camping--goods & {
+      background: #9ff0d4;
+    }
+    .camping--event & {
+      background: #a0f6d9;
+    }
   }
   &__floating {
     position: fixed;
