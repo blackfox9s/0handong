@@ -128,9 +128,11 @@ function infoToon () {
     $nav.find('li').eq(current).addClass('active').siblings().removeClass('active');
   }
   itemAction();
-  $nav.find('li').not('.disabled').off('click').on('click', function(e) {
-    current = $(this).index();
-    itemAction();
+  $nav.find('li').off('click').on('click', function(e) {
+    if (!$(this).hasClass('disabled')) {
+      current = $(this).index();
+      itemAction();
+    }
   });
 }
 
