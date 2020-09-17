@@ -200,7 +200,12 @@ function dateCheck () {
     if ($this[0].tagName === 'A') {
       $this.off('click').on('click', function () {
         if (today < startDay) {
-          alertPopup(true, 'ready');
+          if ($this.attr('data-alert') === 'day') {
+            console.log()
+            alertPopup(true, '<span><em>'+ startDay.format('DD') +'일</em></span> 오픈');
+          } else {
+            alertPopup(true, 'ready');
+          }
           return false;
         }
       });
