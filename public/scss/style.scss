@@ -838,25 +838,26 @@ body {
   }
 
   &__notice {
-    padding: rem(40) rem(50) rem(178);
+    padding: rem(40) rem(40) rem(133) rem(50);
     line-height: 1.5;
     letter-spacing: -0.087em;
     color: #000;
 
     .notice-guide {
       & + dl {
-        margin-top: rem(80);
+        margin-top: rem(32);
       }
+
       dt {
-        font-size: rem(42);
+        font-size: rem(35);
         font-family: $font500;
-        margin-bottom: rem(19);
+        margin-bottom: rem(14);
       }
 
       dd {
         position: relative;
         font-family: $font300;
-        font-size: rem(29);
+        font-size: rem(27);
         padding-left: rem(22);
 
         & + dd {
@@ -881,7 +882,7 @@ body {
 
       dt {
         font-family: $font500;
-        margin-bottom: rem(13);
+        margin-bottom: rem(9);
       }
 
       dd {
@@ -890,7 +891,7 @@ body {
         margin-left: rem(129);
 
         & + dd {
-          margin-top: rem(13);
+          margin-top: rem(-1);
         }
       }
     }
