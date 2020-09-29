@@ -886,12 +886,24 @@ body {
       }
 
       dd {
+        position: relative;
         font-family: $font300;
         text-indent: rem(-129);
-        margin-left: rem(129);
+        padding-left: rem(151);
 
         & + dd {
           margin-top: rem(-1);
+        }
+
+        &::before {
+          content: '';
+          width: rem(4);
+          height: rem(4);
+          border-radius: 100%;
+          background: #333;
+          position: absolute;
+          top: rem(16);
+          left: rem(1);
         }
       }
     }
