@@ -201,7 +201,6 @@ function dateCheck () {
       $this.off('click').on('click', function () {
         if (today < startDay) {
           if ($this.attr('data-alert') === 'day') {
-            console.log()
             alertPopup(true, '<span><em>'+ startDay.format('DD') +'일</em></span> 오픈');
           } else {
             alertPopup(true, 'ready');

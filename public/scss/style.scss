@@ -938,7 +938,7 @@ body {
       position: relative;
     }
 
-    .disabled .shadow-box {
+    .hide .shadow-box {
       &::before, &::after {
         content: '';
         position: absolute;
