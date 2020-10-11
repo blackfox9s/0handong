@@ -162,7 +162,7 @@ function goodsTopSlide () {
   $obj.find('.item .button__plus').off('click').on('click', function () {
     owl.trigger('stop.owl.autoplay');
     if ($(this).closest('.item').hasClass('disabled')) {
-      alertPopup(true, 'noOpen');
+      alertPopup(true, 'ready');
     } else {
       popupOpen('goods', $(this).attr('data-index'))
     }

@@ -888,8 +888,8 @@ body {
       dd {
         position: relative;
         font-family: $font300;
-        text-indent: rem(-129);
-        padding-left: rem(151);
+        text-indent: rem(-122);
+        padding-left: rem(145);
 
         & + dd {
           margin-top: rem(-1);
@@ -994,18 +994,19 @@ body {
     margin-top: rem(-80);
     background: #9ff0d4;
     border-radius: rem(80) 0 0;
-    padding: rem(99) 0 rem(150);
+    padding: rem(67) 0 rem(150);
 
     &-title {
       position: relative;
+      margin-bottom: rem(50);
 
       a {
         background: transparent;
         position: absolute;
-        top: 71.5%;
-        left: 8%;
-        width: 35.5%;
-        height: 10.5%;
+        bottom: 0;
+        left: 6.5%;
+        width: 87%;
+        height: 25.5%;
         font-size: 0;
       }
     }
@@ -1241,7 +1242,7 @@ body {
 
   &__contents {
     max-height: 65vh;
-    margin: rem(92) rem(42) 0;
+    margin: rem(92) rem(20) 0;
     -webkit-overflow-scrolling: touch;
     overflow-y: auto;
     line-height: 1;
@@ -1315,7 +1316,17 @@ body {
 
   &-image {
     .popup__contents {
-      background: #dcdcdc;
+      max-height: 80vh;
+      margin: 0 rem(2);
+      padding: rem(112) 0 rem(190);
+    }
+
+    .popup__buttons {
+      position: absolute;
+      right: rem(-2);
+      bottom: rem(-1);
+      margin: 0;
+      padding: 0;
     }
   }
 
@@ -1606,6 +1617,13 @@ body {
         background-size: contain;
         z-index: 2;
         font-size: 0;
+      }
+
+      &.early-bird {
+        width: 101%;
+        a {
+          background-image: url('../images/info/popup_kakao_btn2.png');
+        }
       }
     }
   }
