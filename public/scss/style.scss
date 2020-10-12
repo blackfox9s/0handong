@@ -146,7 +146,6 @@ body {
     span {
       position: relative;
       padding-left: rem(4);
-      padding-right: rem(84);
 
       &::before, &::after {
         content: '';
@@ -170,13 +169,16 @@ body {
     }
 
     &.type1 {
-      span::after {
-        right: 0;
-        bottom: rem(25);
-        width: rem(115);
-        height: rem(107);
-        background-image: url('../images/button_image_pop.png');
+      span {
+        padding-right: rem(12);
       }
+      //span::after {
+      //  right: 0;
+      //  bottom: rem(25);
+      //  width: rem(115);
+      //  height: rem(107);
+      //  background-image: url('../images/button_image_pop.png');
+      //}
     }
 
     &.type2 {
