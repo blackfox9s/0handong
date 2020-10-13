@@ -30,6 +30,9 @@ function alertPopup(opened, msg, link) {
       case 'already':
         text = '이미 참여하셨습니다.';
         break;
+      case 'goods':
+        text = '한정판 굿즈는<br /><span><em>순차 공개 </em></span> 됩니다.';
+        break;
       default:
         text = msg
     }
@@ -162,7 +165,7 @@ function goodsTopSlide () {
   $obj.find('.item .button__plus').off('click').on('click', function () {
     owl.trigger('stop.owl.autoplay');
     if ($(this).closest('.item').hasClass('disabled')) {
-      alertPopup(true, 'ready');
+      alertPopup(true, 'goods');
     } else {
       popupOpen('goods', $(this).attr('data-index'))
     }
