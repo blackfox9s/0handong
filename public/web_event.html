@@ -9,7 +9,7 @@
   <link rel='stylesheet' type='text/css' href='css/owl.carousel.min.css'/>
   <link rel='stylesheet' type='text/css' href='css/style.css'/>
   <script type="text/javascript" src='js/jquery.min.js'></script>
-  <script type="text/javascript" src='js/jquery.min.js'></script>
+  <script type="text/javascript" src='js/moment.min.js'></script>
   <script type="text/javascript" src='js/owl.carousel.min.js'></script>
   <script type="text/javascript" src='js/goodsEvent.js'></script>
 </head>
@@ -25,7 +25,7 @@
 
     <!-- content BEGIN  -->
     <section id="camping">
-      <div class="camping__wrap">
+      <div class="camping__wrap page-event-main">
         <section class="camping__tab">
           <button class="button__back" onclick="history.back()">back</button>
           <ul>
@@ -40,38 +40,90 @@
           <!-- 이벤트 main(s) -->
           <div class="event__main">
             <article class="event__main-top">
-              <div class="shadow-box">
-                <img src="images/event/index.png" alt="" />
-                <div class="event__main-top-text">
-                  <img src="images/event/index_top_title.png" alt="사죠영과 함께 캠핑인더시티" />
-                  <em>0월 0일까지</em>
-                </div>
+              <img src="images/event/main_top_detail.jpg" alt="" />
+              <div class="event__main-top-buttons">
+                <a href="javascript:popupOpen('benefit');" class="button__black">혜택안내</a>
+                <a href="javascript:popupOpen('how-apply');" class="button__black">신청방법</a>
               </div>
-              <a href="event_apply.html" class="button__plus">자세히보기</a>
             </article>
 
-            <article class="event__main-banner">
-              <p class="event__main-banner-title">
-                <img src="images/event/banner_title.png" alt="아직 재미있는 일들이 너무 많은걸 사죠영이랑 더 놀아죠영!" />
+            <article class="event-step">
+              <p class="event-step__title">
+                <img src="images/event/txt_step1.png" alt="step1" />
               </p>
-              <ul>
-                <li>
-                  <a href="event_goods.html">
-                    <img src="images/event/banner1.png" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="images/event/banner2.png" alt="" />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="images/event/banner3.png" alt="" />
-                  </a>
-                </li>
-              </ul>
+              <p class="event-step__txt">
+                가장 마음에 드는 사죠영을 골라죠영!
+              </p>
+              <div class="event-step__slide">
+                <div class="owl-carousel">
+                  <div class="item">
+                    <img src="images/event/step_download_image1.jpg" alt="" />
+                  </div>
+                  <div class="item">
+                    <img src="images/event/step_download_image2.jpg" alt="" />
+                  </div>
+                  <div class="item">
+                    <img src="images/event/step_download_image3.jpg" alt="" />
+                  </div>
+                  <div class="item">
+                    <img src="images/event/step_download_image4.jpg" alt="" />
+                  </div>
+                  <div class="item">
+                    <img src="images/event/step_download_image5.jpg" alt="" />
+                  </div>
+                  <div class="item">
+                    <img src="images/event/step_download_image6.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="button__black-line">이미지 저장하기</a>
             </article>
+
+            <article class="event-step">
+              <p class="event-step__title">
+                <img src="images/event/txt_step2.png" alt="step2" />
+              </p>
+              <p class="event-step__txt">
+                필수 해시태그를 복사해죠영!
+              </p>
+              <div class="event-step__hash">
+                #iPhone12 #SK텔레콤 #사죠영<br />#사죠영과줄서죠영
+              </div>
+              <a href="javascript: hashTagCopy();" class="button__black-line">해쉬태그 복사</a>
+              <div class="event-step__buttons">
+                <a href="javascript:actionInstagram('intent://instagram.com/#Intent;package=com.instagram.android;scheme=https;end', 'instagram://media', 'https://itunes.apple.com/kr/app/instagram/id389801252?mt=8')" class="button__black --big">
+                  줄서기 하러가영
+                </a>
+                <a href="https://bit.ly/2ZBds2V" target="_blank" class="button__yellow --big">
+                  무료 이모티콘 받으러 가영
+                </a>
+              </div>
+            </article>
+
+            <!-- 유의사항 -->
+            <article class="event__notice">
+              <dl class="notice-guide">
+                <dt>사죠영 얼리버드 신청 유의사항</dt>
+                <dd>얼리버드는 만 14세 이상 카카오 계정을 갖고 있는 고객님이라면 누구나 신청할 수 있습니다.</dd>
+                <dd>얼리버드는 T다이렉트샵 카카오톡 채널에서 신청할 수 있습니다.</dd>
+                <dd>얼리버드 신청 시 T다이렉트샵 카카오톡 채널이 자동으로 친구 추가됩니다.</dd>
+                <dd>얼리버드를 신청한 고객님께 사죠영만의 특별한 혜택과 새로운 iPhone 출시 소식 및 SK텔레콤 구매 혜택이 순차적으로 공개됩니다.</dd>
+              </dl>
+              <dl class="notice-guide">
+                <dt>사죠영 이모티콘 이벤트 유의사항</dt>
+                <dd>이모티콘은 사죠영 얼리버드를 신청한 카카오 계정 1개당 1회만 다운로드할 수 있습니다.</dd>
+                <dd>이모티콘은 2020년 10월 7일(수) ~ 10월 20일(화) 안에 사죠영 얼리버드 신청하신 고객님 선착순 50만 명에게 지급되며, 소진 시 일찍 종료될 수 있습니다.</dd>
+                <dd>이모티콘은 다운로드한 날부터 90일간 사용할 수 있습니다.</dd>
+                <dd>이모티콘은 카카오톡 해외 버전, Kids OS 에서는 지급받을 수 없습니다.<br />이 이벤트는 SK텔레콤의 사정에 따라 변경되거나 취소될 수 있습니다.</dd>
+              </dl>
+              <dl class="office-info">
+                <dt>이벤트 운영 사무국</dt>
+                <dd>이메일: 0handongevent@gmail.com</dd>
+                <dd>전화번호: 1877-0598</dd>
+                <dd>영업시간: 영업시간 : 평일 10:00 ~ 18:00<br/>*공휴일 및 점심시간 제외(12:00~13:00)</dd>
+              </dl>
+            </article>
+            <!-- 유의사항(e) -->
           </div>
           <!-- 이벤트 main(e) -->
         </section>
@@ -101,8 +153,95 @@
       </article>
       <!-- 공통 알럿 팝업(e) -->
 
+      <!-- 신청방법 팝업(s) -->
+      <article class="popup popup-how-apply">
+        <div class="popup__box">
+          <span class="button__close" onclick="popupClose($(this))">close</span>
+          <section class="popup__contents">
+            <article class="owl-carousel">
+              <div class="item">
+                <div class="text-grp">
+                  <p class="text-grp__type1"><img src="images/event/popup_step1.png" alt="" /></p>
+                  <p class="text-grp__type2">
+                    가장 마음에 드는<br />
+                    사죠영을 골라죠영
+                  </p>
+                </div>
+                <img src="images/event/popup_step_detail1.jpg" alt="" />
+              </div>
+              <div class="item">
+                <div class="text-grp">
+                  <p class="text-grp__type1"><img src="images/event/popup_step2.png" alt="" /></p>
+                  <p class="text-grp__type2">
+                    사죠영 이미지를<br />
+                    핸드폰에 저장해영
+                  </p>
+                </div>
+                <img src="images/event/popup_step_detail2.jpg" alt="" />
+              </div>
+              <div class="item">
+                <div class="text-grp">
+                  <p class="text-grp__type1"><img src="images/event/popup_step3.png" alt="" /></p>
+                  <p class="text-grp__type2">
+                    필수 해시태그를 복사해영
+                  </p>
+                  <p class="text-grp__type3">
+                    #SK텔레콤 #사죠영 #아이폰12<br />
+                    #사죠영아이폰12줄서기
+                  </p>
+                </div>
+                <img src="images/event/popup_step_detail3.jpg" alt="" />
+              </div>
+              <div class="item">
+                <div class="text-grp">
+                  <p class="text-grp__type1"><img src="images/event/popup_step4.png" alt="" /></p>
+                  <p class="text-grp__type2">
+                    인스타그램으로 이동하고<br />
+                    내 계정으로 로그인 해영
+                  </p>
+                </div>
+                <img src="images/event/popup_step_detail4.jpg" alt="" />
+              </div>
+              <div class="item">
+                <div class="text-grp">
+                  <p class="text-grp__type1"><img src="images/event/popup_step5.png" alt="" /></p>
+                  <p class="text-grp__type2">
+                    해시태그와 함께<br />
+                    이미지를 업로드해영
+                  </p>
+                  <p class="text-grp__type4">* 중복 참여도 가능해영</p>
+                </div>
+                <img src="images/event/popup_step_detail5.jpg" alt="" />
+              </div>
+            </article>
+          </section>
+        </div>
+      </article>
+      <!-- 신청방법 팝업(e) -->
+
+      <!-- 혜택 팝업(s) -->
+      <article class="popup popup-benefit">
+        <div class="popup__box">
+          <span class="button__close" onclick="popupClose($(this))">close</span>
+          <section class="popup__contents">
+            <article class="owl-carousel">
+              <div class="item"><img src="images/event/benefit1.jpg" /></div>
+              <div class="item"><img src="images/event/benefit2.jpg" /></div>
+              <div class="item"><img src="images/event/benefit3.jpg" /></div>
+              <div class="item"><img src="images/event/benefit4.jpg" /></div>
+              <div class="item"><img src="images/event/benefit5.jpg" /></div>
+              <div class="item"><img src="images/event/benefit6.jpg" /></div>
+              <div class="item"><img src="images/event/benefit7.jpg" /></div>
+              <div class="item"><img src="images/event/benefit8.jpg" /></div>
+            </article>
+          </section>
+        </div>
+      </article>
+      <!-- 혜택 팝업(e) -->
+
       <script type="text/javascript">
         dateCheck();
+        eventSlide();
       </script>
     </section>
     <!-- content END -->

@@ -214,3 +214,94 @@ function dateCheck () {
     }
   });
 }
+
+function hashTagCopy () {
+  const copyTarget = document.createElement('textarea')
+  document.body.appendChild(copyTarget)
+  copyTarget.value = $('.event-step__hash').html().replace(/<br ?\/?>/g, '')
+  copyTarget.select()
+  copyTarget.setSelectionRange(0, 9999)
+  document.execCommand('copy')
+  document.body.removeChild(copyTarget)
+  alert('해시태그를 복사했습니다.')
+}
+
+function eventSlide () {
+  var $obj = $('.event-step__slide');
+  if ($obj.length > 0) {
+    var $owl = $obj.find('.owl-carousel');
+    var change = function () {
+      var src = $obj.find('.owl-stage .active img').attr('src')
+      $obj.parent().find('.button__black-line').attr('href', src)
+    }
+    $owl.on('initialized.owl.carousel', change)
+    $owl.owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: false,
+      autoplayTimeout: 3000,
+      nav: true,
+    });
+    $owl.on('translated.owl.carousel', change);
+  }
+
+  var $popupWay = $('.popup-how-apply');
+  if ($popupWay.length > 0) {
+    var $owl = $popupWay.find('.owl-carousel');
+    $owl.owlCarousel({
+      items: 1,
+      loop: false,
+      autoplay: false,
+      autoplayTimeout: 3000,
+      dots: true,
+      nav: false
+    });
+  }
+
+  var $popupBenefit = $('.popup-benefit');
+  if ($popupBenefit.length > 0) {
+    var $owl = $popupBenefit.find('.owl-carousel');
+    $owl.owlCarousel({
+      items: 1,
+      loop: false,
+      autoplay: false,
+      autoplayTimeout: 3000,
+      dots: true,
+      nav: false
+    });
+  }
+}
+
+function mobileCheck() {
+  var os;
+
+  var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
+
+  if (mobile) {
+    var userAgent = navigator.userAgent.toLowerCase();
+    if (userAgent.search("android") > -1) {
+      return os = "android";
+    } else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1) || (userAgent.search("ipad") > -1)) {
+      return os = "ios";
+    } else {
+      return os = "otehr";
+    }
+
+  } else {
+    return os = "pc";
+  }
+}
+
+function actionInstagram(android_url, ios_url, ios_appstore_url) {
+  var check = mobileCheck();
+  if (check !== "pc") {
+    if (check === "ios") {
+      setTimeout(function () {
+        window.open(ios_appstore_url);
+      }, 1500);
+      location.href = ios_url;
+    } else {
+      location.href = android_url;
+    }
+  }
+}
