@@ -66,8 +66,9 @@ function popupOpen(target, num) {
 }
 
 function popupClose (obj) {
-  if (obj.closest('.popup').hasClass('popup-info')) {
-    $('.popup-info .owl-carousel').trigger('stop.owl.autoplay')
+  var $parent = obj.closest('.popup')
+  if ($parent.hasClass('popup-info') || $parent.hasClass('popup-benefit') || $parent.hasClass('popup-how-apply')) {
+    $parent.find('.owl-carousel').trigger('to.owl.carousel', 0).trigger('stop.owl.autoplay')
   }
   obj.closest('.popup').removeClass('opened')
 }
@@ -250,8 +251,8 @@ function eventSlide () {
     var $owl = $popupWay.find('.owl-carousel');
     $owl.owlCarousel({
       items: 1,
-      loop: false,
-      autoplay: false,
+      loop: true,
+      autoplay: true,
       autoplayTimeout: 3000,
       dots: true,
       nav: false
@@ -263,8 +264,8 @@ function eventSlide () {
     var $owl = $popupBenefit.find('.owl-carousel');
     $owl.owlCarousel({
       items: 1,
-      loop: false,
-      autoplay: false,
+      loop: true,
+      autoplay: true,
       autoplayTimeout: 3000,
       dots: true,
       nav: false
