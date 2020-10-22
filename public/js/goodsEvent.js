@@ -55,8 +55,9 @@ function alertPopup(opened, msg, link) {
 function popupOpen(target, num) {
   var $obj = $('.popup-' + target)
   if (target === 'goods') {
-    var $item = $obj.find('.popup-goods__list li');
+    var $item = $obj.find('[data-goods]');
     var $selectItem = $item.filter('[data-goods="'+ num +'"]')
+    $obj.find('.popup__contents').scrollTop(0);
     $item.hide();
     $selectItem.show();
   } else if (target === 'info') {

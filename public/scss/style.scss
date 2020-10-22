@@ -140,7 +140,7 @@ a, button {
   }
 
   &__image-pop {
-    color: #333 !important;
+    color: #333;
     background: #90eba5;
     height: rem(100);
     display: inline-flex;
@@ -150,6 +150,11 @@ a, button {
     line-height: 1;
     padding: rem(1) rem(39) 0 rem(46);
     border-top-left-radius: rem(40);
+    &:link,
+    &:active,
+    &:visited {
+      color: #333;
+    }
 
     &:disabled {
       opacity: 0.7;
@@ -185,13 +190,26 @@ a, button {
         padding-right: 0;
       }
 
-      //span::after {
-      //  right: 0;
-      //  bottom: rem(25);
-      //  width: rem(115);
-      //  height: rem(107);
-      //  background-image: url('../images/button_image_pop.png');
-      //}
+      &.--dark-green, &.--black {
+        border-radius: 0;
+        color: #fff;
+        &:link,
+        &:active,
+        &:visited {
+          color: #fff;
+        }
+
+        span::before {
+          background: #fff;
+        }
+      }
+      &.--dark-green {
+        background: #005f3f;
+      }
+
+      &.--black {
+        background: #111;
+      }
     }
 
     &.type2 {
@@ -1203,11 +1221,14 @@ a, button {
   }
 
   &-step {
-    background: #fefefe;
     padding: rem(100) 0;
     text-align: center;
 
-    & + & {
+    &.--step1 {
+      background: #fefefe;
+    }
+
+    &.--step2 {
       background: #f8f8f8;
     }
 
@@ -1302,6 +1323,10 @@ a, button {
           }
         }
       }
+    }
+
+    &__detail {
+      margin: rem(55) rem(35) 0;
     }
   }
 
@@ -1898,6 +1923,25 @@ a, button {
   }
 
   &-benefit {}
+
+  &-get {
+    .popup__box {
+      border: none;
+    }
+
+    .popup__contents {
+      margin: 0;
+      padding: 0;
+      max-height: 70vh;
+    }
+
+    .popup__buttons {
+      margin: 0;
+      a, button {
+        width: 100%;
+      }
+    }
+  }
 }
 
 /* owl 슬라이드 */

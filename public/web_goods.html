@@ -75,7 +75,7 @@
           <article class="goods__banner">
             <p class="goods__banner-title">
               <img src="images/goods/banner_title.png" alt="얼리버드 신청하고 아이폰을 구매할때! 사죠영 굿즈 이렇게 받아영" />
-              <a href="javascript:popupOpen('kakao');">신청방법보기</a>
+              <a href="javascript:popupOpen('get');">신청방법보기</a>
             </p>
             <ul>
               <li>
@@ -139,57 +139,46 @@
             </ul>
           </section>
           <div class="popup__buttons">
-            <button class="button__image-pop type1" onclick="popupClose($(this)); popupOpen('policy');">
-              얼리버드 <span>신청하러 가기</span>
+            <button data-goods="1" class="button__image-pop type1" onclick="popupClose($(this)); popupOpen('policy');">
+              얼리버드 <span>할인 쿠폰 신청</span>
+            </button>
+            <button data-goods="2" class="button__image-pop type1" onclick="popupClose($(this)); popupOpen('policy');">
+              얼리버드 <span>할인 쿠폰 신청</span>
+            </button>
+            <button data-goods="3" class="button__image-pop type1" onclick="popupClose($(this)); popupOpen('policy');">
+              T다이렉트샵 <span>기획전 바로 가기</span>
+            </button>
+            <button data-goods="4" class="button__image-pop type1" onclick="popupClose($(this)); popupOpen('policy');">
+              T다이렉트샵 <span>기획전 바로 가기</span>
             </button>
           </div>
         </div>
       </article>
       <!-- 굿즈 소개 이미지 팝업(s) -->
 
-      <!-- 굿즈 신청방법(정책) 팝업(s) -->
-      <article class="popup popup-image popup-policy">
+      <!-- 굿즈 신청방법 팝업(s) -->
+      <article class="popup popup-get">
         <div class="popup__box">
           <span class="button__close" onclick="popupClose($(this))">close</span>
           <section class="popup__contents">
-            굿즈 정책 소개 이미지 노출
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <img src="images/goods/pop_get.jpg" alt="" />
           </section>
           <div class="popup__buttons">
-            <a href="#" class="button__image-pop type2">
-              아이폰 <span>구매하러 가영</span>
+            <a href="#" class="button__image-pop type1 --dark-green">
+              얼리버드 <span>할인 쿠폰 받으러 가기</span>
+            </a>
+            <a href="https://m.shop.tworld.co.kr/exhibition/view?exhibitionId=P00000152" target="_blank" class="button__image-pop type1 --black">
+              iPhone12 <span>구매하러 가기</span>
             </a>
           </div>
         </div>
       </article>
-      <!-- 굿즈 신청방법(정책) 팝업(s) -->
-
-      <!-- 캠핑인더시티 신청방법(s) -->
-      <article class="popup popup-kakao">
-        <div class="popup__box">
-          <span class="button__close" onclick="popupClose($(this))">close</span>
-          <section class="popup__contents">
-            <!--<img src="images/info/popup_kakao.png" alt="" />-->
-            <img src="images/info/popup_kakao2.png" alt="" />
-          </section>
-          <div class="popup__buttons">
-            <a data-startDate="2020-10-07 14:00" data-alert="day" href="https://bit.ly/2ZBds2V" target="_blank"> <img src="images/info/popup_kakao_btn2.png" alt="T다이렉트샵 톡채널 바로가영" />
-            </a>
-          </div>
-        </div>
-      </article>
-      <!-- 캠핑인더시티 신청방법(s) -->
+      <!-- 굿즈 신청방법 팝업(s) -->
 
       <!-- alert 팝업 실행 :: 개발 시 삭제 -->
       <div class="sr-links">
         <a href="javascript:popupOpen('goods', 1)">굿즈 소개</a>
-        <a href="javascript:popupOpen('policy')">굿즈 정책 소개</a>
+        <a href="javascript:popupOpen('get')">굿즈 GET하는 방법 소개</a>
         <a href="javascript:popupOpen('kakao')">굿즈신청방법</a>
         <a href="javascript:alertPopup(true, 'noOpen')">오픈 준비 중</a>
         <a href="javascript:alertPopup(true, 'ready')">준비 중</a>
