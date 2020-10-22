@@ -61,7 +61,7 @@ function popupOpen(target, num) {
     $item.hide();
     $selectItem.show();
   } else if (target === 'info' || target === 'benefit' || target === 'how-apply') {
-    $obj.find('.owl-carousel').trigger('to.owl.carousel', 0).trigger('play.owl.autoplay', 4000)
+    $obj.find('.owl-carousel').trigger('play.owl.autoplay')
   }
   $obj.addClass('opened')
 }
@@ -69,7 +69,7 @@ function popupOpen(target, num) {
 function popupClose (obj) {
   var $parent = obj.closest('.popup')
   if ($parent.hasClass('popup-info') || $parent.hasClass('popup-benefit') || $parent.hasClass('popup-how-apply')) {
-    $parent.find('.owl-carousel').trigger('to.owl.carousel', 0).trigger('stop.owl.autoplay')
+    $parent.find('.owl-carousel').trigger('stop.owl.autoplay').trigger('to.owl.carousel', 0)
   }
   obj.closest('.popup').removeClass('opened')
 }
@@ -253,7 +253,7 @@ function eventSlide () {
     $owl.owlCarousel({
       items: 1,
       loop: true,
-      autoplay: true,
+      autoplay: false,
       autoplayTimeout: 3000,
       dots: true,
       nav: false
@@ -266,7 +266,7 @@ function eventSlide () {
     $owl.owlCarousel({
       items: 1,
       loop: true,
-      autoplay: true,
+      autoplay: false,
       autoplayTimeout: 3000,
       dots: true,
       nav: false
