@@ -60,8 +60,8 @@ function popupOpen(target, num) {
     $obj.find('.popup__contents').scrollTop(0);
     $item.hide();
     $selectItem.show();
-  } else if (target === 'info') {
-    $('.popup-info .owl-carousel').trigger('to.owl.carousel', 0).trigger('play.owl.autoplay', 4000)
+  } else if (target === 'info' || target === 'benefit' || target === 'how-apply') {
+    $obj.find('.owl-carousel').trigger('to.owl.carousel', 0).trigger('play.owl.autoplay', 4000)
   }
   $obj.addClass('opened')
 }
